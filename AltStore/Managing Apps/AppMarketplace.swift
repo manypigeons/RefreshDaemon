@@ -104,6 +104,8 @@ actor AppMarketplace: NSObject
 {
     static let shared = AppMarketplace()
     
+    nonisolated let tracker = AppTracker()
+    
     private let session = URLSession(configuration: .sharedCookies)
     private let pinnedCertificates: [SecCertificate]
     
@@ -245,7 +247,7 @@ extension AppMarketplace
         let operation = AppManager.AppOperation.install(storeApp)
         AppManager.shared.set(progress, for: operation)
         
-        let bundleID = await $storeApp.bundleIdentifier
+        let (appName, bundleID) = await $storeApp.perform { ($0.name, $0.bundleIdentifier) }
         
         let task = Task<AsyncManaged<InstalledApp>, Error>(priority: .userInitiated) {
             try await InstallTaskContext.withValues(bundleID: bundleID, progress: progress, presentingViewController: presentingViewController, beginInstallationHandler: beginInstallationHandler) {
@@ -258,11 +260,12 @@ extension AppMarketplace
                     
                     return installedApp
                 }
-                catch
+                catch let error
                 {
-                    self.finish(operation, result: .failure(error), progress: progress)
+                    let nsError = (error as NSError).withLocalizedTitle(String(localized: "Unable to install \(appName)."))
+                    self.finish(operation, result: .failure(nsError), progress: progress)
                     
-                    throw error
+                    throw nsError
                 }
             }
         }
@@ -310,11 +313,12 @@ extension AppMarketplace
                     
                     return installedApp
                 }
-                catch
+                catch let error
                 {
-                    self.finish(operation, result: .failure(error), progress: progress)
+                    let nsError = (error as NSError).withLocalizedTitle(String(localized: "Unable to update \(appName)."))
+                    self.finish(operation, result: .failure(nsError), progress: progress)
                     
-                    throw error
+                    throw nsError
                 }
             }
         }
@@ -592,23 +596,39 @@ private extension AppMarketplace
             return installMarketplaceAppViewController
         }
         
-        if let installMarketplaceAppViewController
+        let localApp = await AppLibrary.current.app(forAppleItemID: marketplaceID)
+        
+        defer {
+            // Always reset error for app when this function exits.
+            // This ensures the next installation attempt doesn't have cached error.
+            self.tracker.setError(nil, for: localApp)
+        }
+        
+        do
         {
-            // Retrieve InstallTaskContext.presentingViewController now because it will be nil in the DispatchQueue.main.async call.
-            guard let presentingViewController = await InstallTaskContext.presentingViewController else {
-                throw OperationError.unknown(failureReason: NSLocalizedString("Could not determine presenting context.", comment: ""))
-            }
-            
-            try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, Error>) -> Void in
-                DispatchQueue.main.async {
-                    installMarketplaceAppViewController.completionHandler = { result in
-                        continuation.resume(with: result)
+            if let installMarketplaceAppViewController
+            {
+                // Retrieve InstallTaskContext.presentingViewController now because it will be nil in the DispatchQueue.main.async call.
+                guard let presentingViewController = await InstallTaskContext.presentingViewController else {
+                    throw OperationError.unknown(failureReason: NSLocalizedString("Could not determine presenting context.", comment: ""))
+                }
+                            
+                try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, Error>) -> Void in
+                    DispatchQueue.main.async {
+                        installMarketplaceAppViewController.completionHandler = { result in
+                            continuation.resume(with: result)
+                        }
+                        
+                        let navigationController = UINavigationController(rootViewController: installMarketplaceAppViewController)
+                        presentingViewController.present(navigationController, animated: true)
                     }
-                    
-                    let navigationController = UINavigationController(rootViewController: installMarketplaceAppViewController)
-                    presentingViewController.present(navigationController, animated: true)
                 }
             }
+        }
+        catch let error as CancellationError
+        {
+            try self.tracker.verify(localApp)
+            throw error
         }
         
         #if !DEBUG
@@ -625,6 +645,8 @@ private extension AppMarketplace
                 // isInstalled is not reliable, but we use it for logging purposes.
                 (localApp.isInstalled, localApp.installation, localApp.installedMetadata)
             }
+            
+            try self.tracker.verify(localApp)
                         
             Logger.sideload.info("Installing app \(bundleID, privacy: .public)... Installed: \(isInstalled). Metadata: \(String(describing: installedMetadata), privacy: .public). Installation: \(String(describing: installation), privacy: .public)")
                                     
@@ -659,6 +681,8 @@ private extension AppMarketplace
                     
                     while true
                     {
+                        try self.tracker.verify(localApp)
+                        
                         if installation.progress.isCancelled
                         {
                             // Installation was cancelled, so assume error occured.
@@ -766,6 +790,8 @@ private extension AppMarketplace
         
         #endif
         
+        try self.tracker.verify(localApp)
+                
         let backgroundContext = DatabaseManager.shared.persistentContainer.newBackgroundContext()
         
         let installedApp = await backgroundContext.performAsync {

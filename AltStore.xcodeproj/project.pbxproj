@@ -377,9 +377,11 @@
 		D5390C3C2AC3A43900D17E62 /* AddSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5390C3B2AC3A43900D17E62 /* AddSourceViewController.swift */; };
 		D5399FAE2BE56B030038DDEF /* JoinPatreonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5399FAD2BE56B030038DDEF /* JoinPatreonViewController.swift */; };
 		D5399FB02BE56B120038DDEF /* JoinPatreonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5399FAF2BE56B120038DDEF /* JoinPatreonViewController.xib */; };
+		D53D1B5A2E396817004E22BA /* AppTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D1B592E396817004E22BA /* AppTracker.swift */; };
 		D53D84022A2158FC00543C3B /* Permissions.plist in Resources */ = {isa = PBXBuildFile; fileRef = D53D84012A2158FC00543C3B /* Permissions.plist */; };
 		D54058B92A1D6269008CCC58 /* AppPermissionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54058B82A1D6269008CCC58 /* AppPermissionProtocol.swift */; };
 		D54058BB2A1D8FE3008CCC58 /* UIColor+AltStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54058BA2A1D8FE3008CCC58 /* UIColor+AltStore.swift */; };
+		D5409F6D2E3AA75900EE8AD1 /* InstallationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5409F6C2E3AA74B00EE8AD1 /* InstallationError.swift */; };
 		D540E93828EE1BDE000F1B0F /* ErrorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540E93728EE1BDE000F1B0F /* ErrorDetailsViewController.swift */; };
 		D5418F172AD740890014ABD6 /* AppScreenshotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5418F162AD740890014ABD6 /* AppScreenshotCollectionViewCell.swift */; };
 		D54DED1428CBC44B008B27A0 /* ErrorLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54DED1328CBC44B008B27A0 /* ErrorLogTableViewCell.swift */; };
@@ -1058,9 +1060,11 @@
 		D5390C3B2AC3A43900D17E62 /* AddSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSourceViewController.swift; sourceTree = "<group>"; };
 		D5399FAD2BE56B030038DDEF /* JoinPatreonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinPatreonViewController.swift; sourceTree = "<group>"; };
 		D5399FAF2BE56B120038DDEF /* JoinPatreonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinPatreonViewController.xib; sourceTree = "<group>"; };
+		D53D1B592E396817004E22BA /* AppTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTracker.swift; sourceTree = "<group>"; };
 		D53D84012A2158FC00543C3B /* Permissions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Permissions.plist; sourceTree = "<group>"; };
 		D54058B82A1D6269008CCC58 /* AppPermissionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPermissionProtocol.swift; sourceTree = "<group>"; };
 		D54058BA2A1D8FE3008CCC58 /* UIColor+AltStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AltStore.swift"; sourceTree = "<group>"; };
+		D5409F6C2E3AA74B00EE8AD1 /* InstallationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationError.swift; sourceTree = "<group>"; };
 		D540E93728EE1BDE000F1B0F /* ErrorDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDetailsViewController.swift; sourceTree = "<group>"; };
 		D5418F162AD740890014ABD6 /* AppScreenshotCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenshotCollectionViewCell.swift; sourceTree = "<group>"; };
 		D54DED1328CBC44B008B27A0 /* ErrorLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLogTableViewCell.swift; sourceTree = "<group>"; };
@@ -2006,6 +2010,7 @@
 				BF0C4EBC22A1BD8B009A2DD7 /* AppManager.swift */,
 				BF88F97124F8727D00BB75DF /* AppManagerErrors.swift */,
 				D5AE997A2B64791E0068B366 /* AppMarketplace.swift */,
+				D53D1B592E396817004E22BA /* AppTracker.swift */,
 				D5CF17252B96DD27002EC4C7 /* InstallMarketplaceAppViewController.swift */,
 				D5399FAD2BE56B030038DDEF /* JoinPatreonViewController.swift */,
 				D5399FAF2BE56B120038DDEF /* JoinPatreonViewController.xib */,
@@ -2263,6 +2268,7 @@
 				BFDB6A0C22AAFC19007EA6D6 /* OperationError.swift */,
 				D5CF56812A0D83F9006D93E2 /* VerificationError.swift */,
 				D571ADCD2A02FA7400B24B63 /* SourceError.swift */,
+				D5409F6C2E3AA74B00EE8AD1 /* InstallationError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -3366,6 +3372,7 @@
 				BFDB6A0D22AAFC1A007EA6D6 /* OperationError.swift in Sources */,
 				BF74989B23621C0700CED65F /* ForwardingNavigationController.swift in Sources */,
 				D57F2C9426E01BC700B9FA39 /* UIDevice+Vibration.swift in Sources */,
+				D5409F6D2E3AA75900EE8AD1 /* InstallationError.swift in Sources */,
 				BFD2478F2284C8F900981D42 /* Button.swift in Sources */,
 				D5151BE12A90344300C96F28 /* RefreshAllAppsWidgetIntent.swift in Sources */,
 				D540E93828EE1BDE000F1B0F /* ErrorDetailsViewController.swift in Sources */,
@@ -3462,6 +3469,7 @@
 				D5DAE0962804DF430034D8D4 /* UpdatePatronsOperation.swift in Sources */,
 				D54058BB2A1D8FE3008CCC58 /* UIColor+AltStore.swift in Sources */,
 				BFE6326C22A86FF300F30809 /* AuthenticationOperation.swift in Sources */,
+				D53D1B5A2E396817004E22BA /* AppTracker.swift in Sources */,
 				BFF435D8255CBDAB00DD724F /* ALTApplication+AltStoreApp.swift in Sources */,
 				BF4B78FE24B3D1DB008AB4AC /* SceneDelegate.swift in Sources */,
 				BF6C8FB02429599900125131 /* TextCollectionReusableView.swift in Sources */,
