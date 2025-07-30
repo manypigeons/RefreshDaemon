@@ -184,7 +184,13 @@ private extension ErrorLogViewController
         
         let placeholderView = RSTPlaceholderView()
         placeholderView.textLabel.text = NSLocalizedString("No Errors", comment: "")
+        
+        #if MARKETPLACE
+        placeholderView.detailTextLabel.text = NSLocalizedString("Errors that occur while installing apps will appear here.", comment: "")
+        #else
         placeholderView.detailTextLabel.text = NSLocalizedString("Errors that occur when sideloading or refreshing apps will appear here.", comment: "")
+        #endif
+        
         dataSource.placeholderView = placeholderView
         
         return dataSource
