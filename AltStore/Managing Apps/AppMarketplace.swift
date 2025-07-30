@@ -631,8 +631,6 @@ private extension AppMarketplace
             throw error
         }
         
-        #if !DEBUG
-        
         var didAddChildProgress = false
         
         while true
@@ -787,8 +785,6 @@ private extension AppMarketplace
                 break
             }
         }
-        
-        #endif
         
         try self.tracker.verify(localApp)
                 
