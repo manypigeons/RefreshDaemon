@@ -235,6 +235,16 @@ private extension MyAppsViewController
             cell.tintColor = app.tintColor ?? .altPrimary
             cell.versionDescriptionTextView.text = latestSupportedVersion.localizedDescription
             
+            if let description = latestSupportedVersion.localizedDescription?.trimmingCharacters(in: .whitespacesAndNewlines),
+                !description.isEmpty
+            {
+                cell.versionDescriptionTextView.superview?.isHidden = false
+            }
+            else
+            {
+                cell.versionDescriptionTextView.superview?.isHidden = true
+            }
+            
             cell.bannerView.iconImageView.image = nil
             cell.bannerView.iconImageView.isIndicatingActivity = true
             
