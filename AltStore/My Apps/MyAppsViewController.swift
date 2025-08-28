@@ -363,9 +363,21 @@ private extension MyAppsViewController
             cell.bannerView.button.removeTarget(self, action: nil, for: .primaryActionTriggered)
             cell.bannerView.button.addTarget(self, action: #selector(MyAppsViewController.openApp(_:)), for: .primaryActionTriggered)
             
-            // Hide Open button for AltStore.
-            cell.bannerView.button.isHidden = (installedApp.bundleIdentifier == StoreApp.altstoreAppID)
-            
+            if installedApp.bundleIdentifier == StoreApp.altstoreAppID
+            {
+                // Hide Open button + label for AltStore.
+                cell.bannerView.button.isHidden = true
+                cell.bannerView.buttonLabel.isHidden = true
+            }
+            else
+            {
+                // Always show Open button for other apps.
+                cell.bannerView.button.isHidden = false
+                
+                // Use existing hidden state from configure().
+                // cell.bannerView.buttonLabel.isHidden = false
+            }
+                        
             #else
             
             let currentDate = Date()

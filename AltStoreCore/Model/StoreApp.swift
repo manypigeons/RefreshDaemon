@@ -26,6 +26,8 @@ public extension StoreApp
     static let altstoreAppID = "io.altstore.AltStore"
     #endif
     
+    static let publicAltStoreAppID = "io.altstore.AltStore"
+    
     #else
     
     #if ALPHA

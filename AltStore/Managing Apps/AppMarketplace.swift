@@ -175,6 +175,7 @@ extension AppMarketplace
                     }
                 
                 // Remove uninstalled apps
+                // Conveniently, this also removes the "other" version of AltStore if both beta and public version are installed.
                 for installedApp in installedApps where installedApp.bundleIdentifier != StoreApp.altstoreAppID
                 {
                     // Ignore any installed apps without valid marketplace StoreApp.
@@ -469,7 +470,17 @@ private extension AppMarketplace
 
             do
             {
-                guard bundleID == adp.bundleId else { throw VerificationError.mismatchedBundleID(bundleID, expectedBundleID: adp.bundleId, app: appVersion) }
+                if marketplaceID == String(StoreApp.altstoreMarketplaceID)
+                {
+                    // Allow AltStore to have mismatched bundle ID to support "updating" to beta version.
+                    // guard bundleID == adp.bundleId else { throw VerificationError.mismatchedBundleID(bundleID, expectedBundleID: adp.bundleId, app: appVersion) }
+                }
+                else
+                {
+                    // Make sure bundle ID matches for all apps (excluding AltStore + AltStore beta).
+                    guard bundleID == adp.bundleId else { throw VerificationError.mismatchedBundleID(bundleID, expectedBundleID: adp.bundleId, app: appVersion) }
+                }
+                
                 guard marketplaceID == adp.appleItemId else { throw VerificationError.mismatchedMarketplaceID(marketplaceID, expectedMarketplaceID: adp.appleItemId, app: appVersion) }
                 
                 guard version == adp.shortVersionString else { throw VerificationError.mismatchedVersion(version, expectedVersion: adp.shortVersionString, app: appVersion) }
@@ -556,18 +567,33 @@ private extension AppMarketplace
         let bundleID = await $storeApp.bundleIdentifier
         InstallTaskContext.beginInstallationHandler?(bundleID) // TODO: Is this called too early?
         
-        guard bundleID != StoreApp.altstoreAppID else {
-            // MarketplaceKit doesn't support updating marketplaces themselves (🙄)
+        if case .update = operation
+        {
+            // MarketplaceKit doesn't support updating marketplaces themselves pre-iOS 18 (🙄)
             // so we have to ask user to manually update AltStore via Safari.
-            // TODO: Figure out how to handle beta AltStore
+            guard bundleID != StoreApp.altstoreAppID else {
+                await MainActor.run {
+                    let openURL = URL(string: "https://altstore.io/update-pal")!
+                    UIApplication.shared.open(openURL)
+                }
+                
+                // Cancel installation and let user manually update.
+                throw CancellationError()
+            }
+        }
+                
+        if bundleID != StoreApp.altstoreAppID && marketplaceID == StoreApp.altstoreMarketplaceID
+        {
+            // Bundle ID doesn't match AltStore but marketplaceID does, which means we're installing the "other" AltStore.
             
-            await MainActor.run {
-                let openURL = URL(string: "https://altstore.io/update-pal")!
-                UIApplication.shared.open(openURL)
+            guard let presentingViewController = await InstallTaskContext.presentingViewController else {
+                throw OperationError.unknown(failureReason: String(localized: "Could not determine presenting context."))
             }
             
-            // Cancel installation and let user manually update.
-            throw CancellationError()
+            // Installing AltStore beta from regular AltStore, which is equivalent to updating to specific beta versions of PAL.
+            
+            let action = await UIAlertAction(title: String(localized: "Update"), style: .default)
+            try await presentingViewController.presentConfirmationAlert(title: String(localized: "Switch to beta version of AltStore PAL?"), message: String(localized: "This will update AltStore PAL to the latest beta version."), primaryAction: action)
         }
                 
         let installMarketplaceAppViewController = await MainActor.run { [operation] () -> InstallMarketplaceAppViewController? in
