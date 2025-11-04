@@ -180,6 +180,15 @@ private extension ErrorLogViewController
             let cell = cell as! ErrorLogTableViewCell
             cell.appIconImageView.image = image
             cell.appIconImageView.isIndicatingActivity = false
+            
+            if let error
+            {
+                Logger.main.error("Failed to load app icon: \(error.localizedDescription, privacy: .public)")
+            }
+            else
+            {
+                cell.appIconImageView.backgroundColor = .clear
+            }
         }
         
         let placeholderView = RSTPlaceholderView()

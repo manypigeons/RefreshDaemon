@@ -128,7 +128,10 @@ class AppViewController: UIViewController
             Nuke.loadImage(with: self.app.iconURL, options: .shared, into: imageView, progress: nil) { [weak imageView] (result) in
                 switch result
                 {
-                case .success: imageView?.isIndicatingActivity = false
+                case .success:
+                    imageView?.isIndicatingActivity = false
+                    imageView?.backgroundColor = .clear
+                    
                 case .failure(let error): print("[ALTLog] Failed to load app icons.", error)
                 }
             }
