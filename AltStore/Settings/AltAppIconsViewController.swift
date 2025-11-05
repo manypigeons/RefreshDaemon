@@ -43,6 +43,7 @@ extension AltAppIconsViewController
 {
     private enum Section: String, CaseIterable, Decodable, CodingKeyRepresentable
     {
+        case glass
         case modern
         case gradient
         case recessed
@@ -52,6 +53,7 @@ extension AltAppIconsViewController
         var localizedName: String {
             switch self
             {
+            case .glass: return NSLocalizedString("Liquid Glass", comment: "")
             case .modern: return NSLocalizedString("Modern", comment: "")
             case .gradient: return NSLocalizedString("Gradient", comment: "")
             case .recessed: return NSLocalizedString("Recessed", comment: "")
