@@ -81,6 +81,20 @@ class AltAppIconsViewController: UICollectionViewController
         
         self.collectionView.backgroundColor = UIColor(resource: .settingsBackground)
         
+        if #available(iOS 26, *)
+        {
+            let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithDefaultBackground()
+            appearance.shadowColor = nil
+            appearance.titleTextAttributes = textAttributes
+            appearance.largeTitleTextAttributes = textAttributes
+            
+            self.navigationItem.standardAppearance = appearance
+            self.navigationItem.scrollEdgeAppearance = appearance
+        }
+        
         do
         {
             let fileURL = Bundle.main.url(forResource: "AltIcons", withExtension: "plist")!
