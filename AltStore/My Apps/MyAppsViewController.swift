@@ -235,6 +235,16 @@ private extension MyAppsViewController
             cell.tintColor = app.tintColor ?? .altPrimary
             cell.versionDescriptionTextView.text = latestSupportedVersion.localizedDescription
             
+            if let description = latestSupportedVersion.localizedDescription?.trimmingCharacters(in: .whitespacesAndNewlines),
+                !description.isEmpty
+            {
+                cell.versionDescriptionTextView.superview?.isHidden = false
+            }
+            else
+            {
+                cell.versionDescriptionTextView.superview?.isHidden = true
+            }
+            
             cell.bannerView.iconImageView.image = nil
             cell.bannerView.iconImageView.isIndicatingActivity = true
             
@@ -531,23 +541,7 @@ private extension MyAppsViewController
     func update()
     {
         self.updateUnsupportedUpdates()
-        
-        let badgeCount: Int
-        if self.updatesDataSource.itemCount > 0
-        {
-            badgeCount = Int(self.updatesDataSource.itemCount)
-            self.navigationController?.tabBarItem.badgeValue = String(describing: self.updatesDataSource.itemCount)
-        }
-        else
-        {
-            badgeCount = 0
-            self.navigationController?.tabBarItem.badgeValue = nil
-        }
-        
-        UNUserNotificationCenter.current().setBadgeCount(badgeCount) { error in
-            guard let error else { return }
-            Logger.main.error("Failed to update app icon badge count. \(error.localizedDescription, privacy: .public)")
-        }
+        self.updateBadgeCount()
         
         // Reloading collection view when not visible can mess with cell margins.
         guard self.isViewLoaded && self.view.window != nil else { return }
@@ -567,6 +561,34 @@ private extension MyAppsViewController
             // Might not work if already reloading collection view,
             // but hopefully iOS 14 users won't notice...
             self.collectionView.reloadSections(IndexSet([Section.noUpdates.rawValue]))
+        }
+    }
+    
+    func updateBadgeCount()
+    {
+        let fetchRequest: NSFetchRequest<InstalledApp> = InstalledApp.supportedUpdatesFetchRequest()
+        
+        do
+        {
+            let badgeCount = try DatabaseManager.shared.viewContext.count(for: fetchRequest)
+            
+            if badgeCount > 0
+            {
+                self.navigationController?.tabBarItem.badgeValue = String(describing: badgeCount)
+            }
+            else
+            {
+                self.navigationController?.tabBarItem.badgeValue = nil
+            }
+            
+            UNUserNotificationCenter.current().setBadgeCount(badgeCount) { error in
+                guard let error else { return }
+                Logger.main.error("Failed to update app icon badge count. \(error.localizedDescription, privacy: .public)")
+            }
+        }
+        catch
+        {
+            Logger.main.error("Failed to update app icon badge count. \(error.localizedDescription, privacy: .public)")
         }
     }
     
