@@ -219,9 +219,12 @@ class SourceDetailViewController: HeaderContentViewController<SourceHeaderView, 
                 self.addButton.title = title
             }
             
-            if title != self.navigationBarButton.title(for: .normal) && !self.navigationBarButton.isIndicatingActivity
+            if #unavailable(iOS 26)
             {
-                self.navigationBarButton.setTitle(title, for: .normal)
+                if title != self.navigationBarButton.title(for: .normal) && !self.navigationBarButton.isIndicatingActivity
+                {
+                    self.navigationBarButton.setTitle(title, for: .normal)
+                }
             }
             
             self.view.setNeedsLayout()
