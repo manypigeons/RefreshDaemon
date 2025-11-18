@@ -40,7 +40,15 @@ class ErrorLogViewController: UITableViewController
     private var _exportedLogURL: URL?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        if #unavailable(iOS 26)
+        {
+            return .lightContent
+        }
+        else
+        {
+            // Since we've removed the colored nav bar on iOS 26
+            return .default
+        }
     }
     
     override func viewDidLoad()
