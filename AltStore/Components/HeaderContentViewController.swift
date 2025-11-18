@@ -259,6 +259,10 @@ class HeaderContentViewController<Header: UIView, Content: ScrollableContentView
             self.navigationBarButton.isHidden = true
             self.backButton.isHidden = true
             self.navigationBarButtonItem.isHidden = false
+            
+            // Fixes visual bug (hard scroll edge) on iOS 26
+            self.headerScrollView.topEdgeEffect.isHidden = true
+            self.contentViewController.scrollView.topEdgeEffect.isHidden = true
         }
         else
         {
