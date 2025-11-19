@@ -148,8 +148,6 @@ class AppViewController: UIViewController
                 downloadButton.tintColor = self.app.tintColor
             }
             
-            self.navigationBarDownloadButton.tintColor = .clear
-            
             self.backButton.isHidden = true
             self.backButtonContainerView.isHidden = true
         }
