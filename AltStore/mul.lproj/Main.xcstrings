@@ -1,0 +1,330 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "3Co-uv-Fhb.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"App IDs\"; ObjectID = \"3Co-uv-Fhb\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App IDs"
+          }
+        }
+      }
+    },
+    "4gT-9u-k7y.title" : {
+      "comment" : "Class = \"UITabBarItem\"; title = \"My Apps\"; ObjectID = \"4gT-9u-k7y\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Apps"
+          }
+        }
+      }
+    },
+    "7E0-TV-G4l.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Version 4.4.2\"; ObjectID = \"7E0-TV-G4l\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version 4.4.2"
+          }
+        }
+      }
+    },
+    "83Z-Ih-nOW.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"App IDs Description\"; ObjectID = \"83Z-Ih-nOW\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App IDs Description"
+          }
+        }
+      }
+    },
+    "BsL-O2-UjD.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Classic games in your pocket\"; ObjectID = \"BsL-O2-UjD\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Classic games in your pocket"
+          }
+        }
+      }
+    },
+    "DgM-bD-bBY.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"50.4 MB\"; ObjectID = \"DgM-bD-bBY\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "50.4 MB"
+          }
+        }
+      }
+    },
+    "dj7-G8-GFv.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Permissions\"; ObjectID = \"dj7-G8-GFv\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permissions"
+          }
+        }
+      }
+    },
+    "DTD-1Y-76c.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Delta\"; ObjectID = \"DTD-1Y-76c\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delta"
+          }
+        }
+      }
+    },
+    "fVN-ed-uO1.title" : {
+      "comment" : "Class = \"UITabBarItem\"; title = \"News\"; ObjectID = \"fVN-ed-uO1\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "News"
+          }
+        }
+      }
+    },
+    "grk-xM-YWA.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"FREE\"; ObjectID = \"grk-xM-YWA\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "FREE"
+          }
+        }
+      }
+    },
+    "LLv-8I-6Of.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"5/10 App IDs\"; ObjectID = \"LLv-8I-6Of\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5/10 App IDs"
+          }
+        }
+      }
+    },
+    "NHb-0F-cHZ.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"View App IDs\"; ObjectID = \"NHb-0F-cHZ\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View App IDs"
+          }
+        }
+      }
+    },
+    "obM-TM-y2E.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"What's New\"; ObjectID = \"obM-TM-y2E\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What's New"
+          }
+        }
+      }
+    },
+    "OZm-Le-7oJ.title" : {
+      "comment" : "Class = \"UITabBarItem\"; title = \"Settings\"; ObjectID = \"OZm-Le-7oJ\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "pUx-6k-rtr.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"Browse\"; ObjectID = \"pUx-6k-rtr\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Browse"
+          }
+        }
+      }
+    },
+    "Pyt-8D-BZA.text" : {
+      "comment" : "Class = \"UITextView\"; text = \"Hello Me\"; ObjectID = \"Pyt-8D-BZA\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello Me"
+          }
+        }
+      }
+    },
+    "Q7y-bi-ncT.title" : {
+      "comment" : "Class = \"UITabBarItem\"; title = \"Item\"; ObjectID = \"Q7y-bi-ncT\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Item"
+          }
+        }
+      }
+    },
+    "sWo-Y8-aF6.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"App\"; ObjectID = \"sWo-Y8-aF6\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App"
+          }
+        }
+      }
+    },
+    "Uwh-Bg-Ymq.title" : {
+      "comment" : "Class = \"UITabBarItem\"; title = \"Browse\"; ObjectID = \"Uwh-Bg-Ymq\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Browse"
+          }
+        }
+      }
+    },
+    "wGD-mS-8fO.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"2w ago\"; ObjectID = \"wGD-mS-8fO\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2w ago"
+          }
+        }
+      }
+    },
+    "Who-nd-jyt.configuration.title" : {
+      "comment" : "Class = \"UIButton\"; configuration.title = \"...\"; ObjectID = \"Who-nd-jyt\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "..."
+          }
+        }
+      }
+    },
+    "Who-nd-jyt.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Button\"; ObjectID = \"Who-nd-jyt\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Button"
+          }
+        }
+      }
+    },
+    "y1A-Nm-mw7.title" : {
+      "comment" : "Class = \"UICollectionViewController\"; title = \"App IDs\"; ObjectID = \"y1A-Nm-mw7\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App IDs"
+          }
+        }
+      }
+    },
+    "z04-yg-x1t.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"No Updates Available\"; ObjectID = \"z04-yg-x1t\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Updates Available"
+          }
+        }
+      }
+    },
+    "zLJ-Cg-ijh.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"My Apps\"; ObjectID = \"zLJ-Cg-ijh\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Apps"
+          }
+        }
+      }
+    },
+    "Zna-7n-kBz.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"10 App IDs\"; ObjectID = \"Zna-7n-kBz\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10 App IDs"
+          }
+        }
+      }
+    },
+    "ZxL-Ws-lJO.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"News\"; ObjectID = \"ZxL-Ws-lJO\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "News"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

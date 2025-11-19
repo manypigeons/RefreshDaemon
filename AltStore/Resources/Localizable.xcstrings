@@ -1,0 +1,1338 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "“%@” Blocked" : {
+
+    },
+    "“%@” could not be added to AltStore." : {
+
+    },
+    "“%@” will be automatically given these permissions once installed." : {
+
+    },
+    "%@" : {
+
+    },
+    "%@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      }
+    },
+    "%@ %@ is now available for download." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@ is now available for download."
+          }
+        }
+      }
+    },
+    "%@ %@ update. Released on %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@ update. Released on %3$@."
+          }
+        }
+      }
+    },
+    "%@ a month" : {
+
+    },
+    "%@ App IDs" : {
+
+    },
+    "%@ App IDs Remaining" : {
+
+    },
+    "%@ beta" : {
+
+    },
+    "%@ by %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ by %2$@"
+          }
+        }
+      }
+    },
+    "%@ can not jailbreak this device unless you untether it first. Are you sure you want to install without untethering?" : {
+
+    },
+    "%@ can only be downloaded from its original source" : {
+
+    },
+    "%@ could not be downloaded." : {
+
+    },
+    "%@ could not be found." : {
+
+    },
+    "%@ could not be installed." : {
+
+    },
+    "%@ days" : {
+
+    },
+    "%@ DAYS" : {
+
+    },
+    "%@ does not support iOS %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ does not support iOS %2$@."
+          }
+        }
+      }
+    },
+    "%@ is not added to AltStore." : {
+
+    },
+    "%@ may request access to the following:" : {
+
+    },
+    "%@ News" : {
+
+    },
+    "%@ requires %@ App IDs, but %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ requires %2$@ App IDs, but %3$@."
+          }
+        }
+      }
+    },
+    "%@ requires additional permissions not specified by the source." : {
+
+    },
+    "%@ requires an active pledge in order to be installed." : {
+
+    },
+    "%@ requires iOS %@ or earlier." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ requires iOS %2$@ or earlier."
+          }
+        }
+      }
+    },
+    "%@ requires iOS %@ or later." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ requires iOS %2$@ or later."
+          }
+        }
+      }
+    },
+    "%@ requires more permissions than the version that is already installed" : {
+
+    },
+    "%@ Unsupported Updates Available" : {
+
+    },
+    "%@/mo" : {
+
+    },
+    "^[%lld app](inflect: true)" : {
+
+    },
+    "1 App ID" : {
+
+    },
+    "1 App ID Remaining" : {
+
+    },
+    "1 day" : {
+
+    },
+    "A connection to AltServer could not be established." : {
+
+    },
+    "A permission for %@ is missing a usage description." : {
+
+    },
+    "A placeholder app needs to be installed in order to prepare your device for untethering.\n\nThis may take a few moments." : {
+
+    },
+    "A source cannot change its identifier once added. This source can no longer be updated." : {
+
+    },
+    "A source with the identifier '%@' already exists" : {
+
+    },
+    "About" : {
+
+    },
+    "ACCOUNT" : {
+
+    },
+    "Activate" : {
+
+    },
+    "ACTIVATE" : {
+
+    },
+    "Activate %@" : {
+
+    },
+    "Active" : {
+
+    },
+    "ADD" : {
+
+    },
+    "Add More Sources" : {
+
+    },
+    "Add Source" : {
+
+    },
+    "Additional Permissions" : {
+
+    },
+    "all apps downloaded from it." : {
+
+    },
+    "All apps have been refreshed." : {
+
+    },
+    "AltServer" : {
+
+    },
+    "AltServer could not be found." : {
+
+    },
+    "AltStore can only install marketplace apps that have been notarized by Apple." : {
+
+    },
+    "AltStore could not determine this device's UDID." : {
+
+    },
+    "AltStore does not have detailed information for these entitlements." : {
+
+    },
+    "AltStore Expiring Soon" : {
+
+    },
+    "AltStore News" : {
+
+    },
+    "AltStore was denied permission to launch %@." : {
+
+    },
+    "AltStore was unable to use an existing signing certificate, so it had to create a new one. This will cause any apps installed with an existing certificate to expire — including AltStore.\n\nTo prevent AltStore from expiring early, please refresh the app now. AltStore will quit once refreshing is complete." : {
+
+    },
+    "AltStore will expire in 24 hours. Open the app and refresh it to prevent it from expiring." : {
+
+    },
+    "AltStore's shared app group could not be accessed." : {
+
+    },
+    "an app in source “%@”" : {
+
+    },
+    "An iPad screenshot for %@ does not specify its size" : {
+
+    },
+    "An unknown error occured." : {
+
+    },
+    "Any apps you've installed from this source will remain, but they'll no longer receive any app updates." : {
+
+    },
+    "App" : {
+
+    },
+    "App Contains Extensions" : {
+
+    },
+    "app extension" : {
+
+    },
+    "app extensions" : {
+
+    },
+    "App ID:" : {
+
+    },
+    "App Refresh Tip" : {
+
+    },
+    "Approve" : {
+
+    },
+    "Are you sure you want to clear AltStore's cache?" : {
+
+    },
+    "Are you sure you want to clear the error log?" : {
+
+    },
+    "Are you sure you want to remove the source “%@”?" : {
+
+    },
+    "Are you sure you want to restore this backup?" : {
+
+    },
+    "Are you sure you want to sign out?" : {
+
+    },
+    "Are you sure you want to unlink your Patreon account?" : {
+
+    },
+    "Are you sure you'd like to %@ %@?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Are you sure you'd like to %1$@ %2$@?"
+          }
+        }
+      }
+    },
+    "Back Up" : {
+
+    },
+    "Back Up %@" : {
+
+    },
+    "Become a patron" : {
+
+    },
+    "BILLING" : {
+
+    },
+    "Browse" : {
+
+    },
+    "Cannot Activate More than 3 Apps" : {
+
+    },
+    "Cannot Activate More than 3 Apps and App Extensions" : {
+
+    },
+    "Cannot Send Mail" : {
+
+    },
+    "Categories" : {
+
+    },
+    "Change App Icon" : {
+
+    },
+    "Change Icon" : {
+
+    },
+    "Classic" : {
+
+    },
+    "Clear Cache" : {
+
+    },
+    "Clear Error Log" : {
+
+    },
+    "Coming Soon!" : {
+
+    },
+    "Confirm Action" : {
+
+    },
+    "Confirm Installation" : {
+
+    },
+    "Connect Patreon Account" : {
+
+    },
+    "Continue" : {
+
+    },
+    "Continue in App" : {
+
+    },
+    "Copy Error Code" : {
+
+    },
+    "Copy Error Message" : {
+
+    },
+    "Could not back up “%@”." : {
+
+    },
+    "Could not back up jailbreak app." : {
+
+    },
+    "Could not determine presenting context." : {
+
+    },
+    "Could not download OTA archive." : {
+
+    },
+    "Could not enable JIT for %@" : {
+
+    },
+    "Could not extract Spotlight from OTA archive." : {
+
+    },
+    "Could not install %@ placeholder." : {
+
+    },
+    "Could not install %@." : {
+
+    },
+    "Could not open %@ placeholder." : {
+
+    },
+    "Could not open %@." : {
+
+    },
+    "Could not patch %@ placeholder." : {
+
+    },
+    "Could not restore “%@”." : {
+
+    },
+    "CREDITS" : {
+
+    },
+    "Custom Pledge" : {
+
+    },
+    "Deactivate" : {
+
+    },
+    "DEBUG" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Delete sideloaded apps to free up App ID slots." : {
+
+    },
+    "DISPLAY" : {
+
+    },
+    "Don’t know where to start? Try adding one of our Recommended Sources!" : {
+
+    },
+    "Download %@" : {
+
+    },
+    "Download %@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Download %1$@ %2$@"
+          }
+        }
+      }
+    },
+    "Downloading %@…" : {
+
+    },
+    "Downloading iOS firmware..." : {
+
+    },
+    "duplicate versions" : {
+
+    },
+    "Each app and app extension installed with AltStore must register an App ID with Apple.\n\nApp IDs for paid developer accounts never expire, and there is no limit to how many you can create." : {
+
+    },
+    "Each app and app extension installed with AltStore must register an App ID with Apple. Apple limits non-developer Apple IDs to 10 App IDs at a time.\n\n**App IDs can't be deleted**, but they do expire after one week. AltStore will automatically renew App IDs for all active apps once they've expired." : {
+
+    },
+    "Enable Background Refresh to automatically refresh apps in the background when connected to the same Wi-Fi as AltServer." : {
+
+    },
+    "Enable JIT" : {
+
+    },
+    "Enabled JIT for %@" : {
+
+    },
+    "Enter a source's URL below, or add one of the recommended sources." : {
+
+    },
+    "Entitlements are additional permissions that grant access to certain system services, including potentially sensitive information." : {
+
+    },
+    "Error Details" : {
+
+    },
+    "Error Loading Patrons" : {
+
+    },
+    "Error:" : {
+
+    },
+    "Errors that occur when sideloading or refreshing apps will appear here." : {
+
+    },
+    "Errors that occur while installing apps will appear here." : {
+
+    },
+    "Expires in" : {
+
+    },
+    "Expires in %@" : {
+
+    },
+    "Expires in %@." : {
+
+    },
+    "Export Backup" : {
+
+    },
+    "Failed to Activate %@" : {
+
+    },
+    "Failed to Back Up %@" : {
+
+    },
+    "Failed to Clear Error Log" : {
+
+    },
+    "Failed to Deactivate %@" : {
+
+    },
+    "Failed to Enable JIT for %@" : {
+
+    },
+    "Failed to Install %@" : {
+
+    },
+    "Failed to Log In" : {
+
+    },
+    "Failed to Refresh %@" : {
+
+    },
+    "Failed to refresh %@ apps." : {
+
+    },
+    "Failed to refresh 1 app." : {
+
+    },
+    "Failed to Refresh AltStore" : {
+
+    },
+    "Failed to Refresh Apps" : {
+
+    },
+    "Failed to Restore %@ Backup" : {
+
+    },
+    "Failed to retrieve manifest.json URL from Patreon post." : {
+
+    },
+    "Failed to Update %@" : {
+
+    },
+    "Failed to Verify %@" : {
+
+    },
+    "Failure" : {
+
+    },
+    "Featured" : {
+
+    },
+    "Featured Apps" : {
+
+    },
+    "Finish in %@" : {
+
+    },
+    "Finish installing %@?" : {
+
+    },
+    "Follow the instructions in %@ to finish jailbreaking this device." : {
+
+    },
+    "For your protection, please remove the source and uninstall" : {
+
+    },
+    "Free" : {
+
+    },
+    "Free up disk space by removing non-essential data, such as temporary files and backups for uninstalled apps." : {
+
+    },
+    "Gradient" : {
+
+    },
+    "Hey ,\n\nYou’re the best. Your account was linked successfully, so you now have access to our Patreon-exclusive apps. You can find them all in the Browse tab.\n\nThanks for all of your support. Enjoy!\nRiley & Shane" : {
+
+    },
+    "Hey ,\n\nYou’re the best. Your account was linked successfully, so you now have access to the beta versions of all of our apps. You can find them all in the Browse tab.\n\nThanks for all of your support. Enjoy!\nRiley & Shane" : {
+
+    },
+    "Hey y'all,\n\nYou can support future development of our apps by donating to us on Patreon. In return, you'll receive access to the beta versions of our apps and be among the first to try the latest features.\n\nThanks for all your support 💜\nRiley & Shane" : {
+
+    },
+    "If you're using the MacDirtyCow exploit to remove the 3-app limit, you can install up to 10 apps and app extensions instead." : {
+
+    },
+    "If you've removed the 3-sideloaded app limit via the MacDirtyCow exploit, disable this setting to sideload more than 3 apps at a time." : {
+
+    },
+    "In order to finish jailbreaking this device, you need to install %@ then follow the instructions in the app." : {
+
+    },
+    "Inactive" : {
+
+    },
+    "install" : {
+
+    },
+    "Install" : {
+
+    },
+    "Install %@" : {
+
+    },
+    "Install Anyway" : {
+
+    },
+    "Install Untethered Jailbreak" : {
+
+    },
+    "Install Without Untethering" : {
+
+    },
+    "Installed" : {
+
+    },
+    "Installing %@ placeholder…" : {
+
+    },
+    "Installing %@..." : {
+
+    },
+    "Installing…" : {
+
+    },
+    "Invalid ADP install URL." : {
+
+    },
+    "Invalid ADP update URL." : {
+
+    },
+    "Invalid parameters." : {
+
+    },
+    "iOS" : {
+
+    },
+    "iOS %@ or earlier" : {
+
+    },
+    "iOS %@ or later" : {
+
+    },
+    "Jailbreak Requires Untethering" : {
+
+    },
+    "Jailbreak Supports Untethering" : {
+
+    },
+    "JIT will remain enabled until you quit the app." : {
+
+    },
+    "Join Patreon" : {
+
+    },
+    "Keep App Extensions" : {
+
+    },
+    "Last Updated: %@" : {
+
+    },
+    "Link Patreon account" : {
+
+    },
+    "Loading..." : {
+
+    },
+    "MACDIRTYCOW" : {
+
+    },
+    "Make sure to only add sources that you trust." : {
+
+    },
+    "Make sure you're on the same Wi-Fi network as a computer running AltServer, or try connecting this device to your computer via USB." : {
+
+    },
+    "Manage your AltStore PAL annual subscription." : {
+
+    },
+    "Modern" : {
+
+    },
+    "More" : {
+
+    },
+    "Never" : {
+
+    },
+    "New & Updated" : {
+
+    },
+    "New Update Available" : {
+
+    },
+    "No active apps require refreshing." : {
+
+    },
+    "No Apps" : {
+
+    },
+    "No Errors" : {
+
+    },
+    "No Refresh Attempts" : {
+
+    },
+    "No Updates Available" : {
+
+    },
+    "Non-developer Apple IDs are limited to 3 active apps and app extensions, and “%@” contains %@ %@. Please choose an app to deactivate." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Non-developer Apple IDs are limited to 3 active apps and app extensions, and “%1$@” contains %2$@ %3$@. Please choose an app to deactivate."
+          }
+        }
+      }
+    },
+    "Non-developer Apple IDs are limited to 3 active apps and app extensions." : {
+
+    },
+    "Non-developer Apple IDs are limited to 3 active apps and app extensions. Please choose an app to deactivate." : {
+
+    },
+    "Non-developer Apple IDs are limited to 3 active apps. Please choose an app to deactivate." : {
+
+    },
+    "Non-developer Apple IDs are limited to 3 apps and app extensions. Inactive apps don't count towards your total, but cannot be opened until activated." : {
+
+    },
+    "Non-developer Apple IDs are limited to 3 apps. Inactive apps are backed up and uninstalled so they don't count towards your total, but will be reinstalled with all their data when activated again." : {
+
+    },
+    "Non-developer Apple IDs are limited to creating 10 App IDs per week." : {
+
+    },
+    "none are available" : {
+
+    },
+    "one or more apps" : {
+
+    },
+    "One or more apps in source “%@” are missing a marketplaceID. This most likely means they are not notarized, which is not supported by this version of AltStore." : {
+
+    },
+    "only %@ are available" : {
+
+    },
+    "only 1 is available" : {
+
+    },
+    "open" : {
+
+    },
+    "Open" : {
+
+    },
+    "Open %@" : {
+
+    },
+    "Open Placeholder" : {
+
+    },
+    "Operation Failed" : {
+
+    },
+    "Other Entitlements" : {
+
+    },
+    "Patch Placeholder" : {
+
+    },
+    "Patching %@ placeholder…" : {
+
+    },
+    "Patching placeholder app..." : {
+
+    },
+    "PATREON" : {
+
+    },
+    "Patreon Account Detected" : {
+
+    },
+    "Permission" : {
+
+    },
+    "Personalize your AltStore experience by choosing an alternate app icon." : {
+
+    },
+    "Photos" : {
+
+    },
+    "Please enter the 6-digit verification code that was sent to your Apple devices." : {
+
+    },
+    "Please make sure your spelling is correct, or try searching for another app." : {
+
+    },
+    "Please open the placeholder app and follow the instructions to continue jailbreaking your device." : {
+
+    },
+    "Please remove the existing source in order to add this one." : {
+
+    },
+    "Pledge" : {
+
+    },
+    "Pledge %@ a month" : {
+
+    },
+    "Pledge Expired" : {
+
+    },
+    "Pledged" : {
+
+    },
+    "Privacy" : {
+
+    },
+    "Promo" : {
+
+    },
+    "Receive access to beta versions of AltStore, Delta, and more by becoming a patron." : {
+
+    },
+    "Recessed" : {
+
+    },
+    "Recommended Sources" : {
+
+    },
+    "Redeemed PAL Promo" : {
+
+    },
+    "Refresh" : {
+
+    },
+    "Refresh %@" : {
+
+    },
+    "Refresh All" : {
+
+    },
+    "Refresh Later" : {
+
+    },
+    "Refreshed Apps" : {
+
+    },
+    "Refreshing" : {
+
+    },
+    "REFRESHING APPS" : {
+
+    },
+    "remote AltServer %@" : {
+
+    },
+    "Remove" : {
+
+    },
+    "REMOVE" : {
+
+    },
+    "Remove “%@” from AltStore?" : {
+
+    },
+    "Remove App Extensions" : {
+
+    },
+    "Remove Custom Icon" : {
+
+    },
+    "Remove Source" : {
+
+    },
+    "Restore Backup" : {
+
+    },
+    "Retry" : {
+
+    },
+    "Review Permissions" : {
+
+    },
+    "Search FAQ" : {
+
+    },
+    "See All" : {
+
+    },
+    "Sideloaded" : {
+
+    },
+    "Sign in with your Apple ID to download apps from AltStore." : {
+
+    },
+    "Sign Out" : {
+
+    },
+    "SIGN OUT" : {
+
+    },
+    "Sort by…" : {
+
+    },
+    "Sources determine what apps are available in AltStore. The more sources you add, the better your AltStore experience will be." : {
+
+    },
+    "Special thanks to..." : {
+
+    },
+    "Start Backup?" : {
+
+    },
+    "Success" : {
+
+    },
+    "SUPPORT" : {
+
+    },
+    "Switch to beta version of AltStore PAL?" : {
+
+    },
+    "Tap a permission to learn more." : {
+
+    },
+    "Tap to view progress." : {
+
+    },
+    "Tap to view source errors." : {
+
+    },
+    "TECHY THINGS" : {
+
+    },
+    "The %@ '%@' for %@ is missing a usage description." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The %1$@ '%2$@' for %3$@ is missing a usage description."
+          }
+        }
+      }
+    },
+    "the app" : {
+
+    },
+    "The app" : {
+
+    },
+    "The app is in an invalid format." : {
+
+    },
+    "The app listing could not be found." : {
+
+    },
+    "The build version of %@ does not match the build version specified by the source." : {
+
+    },
+    "The bundle ID for %@ does not match the one specified by the source." : {
+
+    },
+    "the bundle identifier %@" : {
+
+    },
+    "The certificate could not be found." : {
+
+    },
+    "The certificate's private key could not be found." : {
+
+    },
+    "The connection failed because a connection cannot be made to the host." : {
+
+    },
+    "The connection failed because the network connection was lost." : {
+
+    },
+    "The connection to AltServer was dropped." : {
+
+    },
+    "The default AltStore source cannot be removed." : {
+
+    },
+    "The dependencies for %@ could not be determined." : {
+
+    },
+    "The dependency “%@” could not be downloaded." : {
+
+    },
+    "The developer certificate could not be found." : {
+
+    },
+    "the downloaded app" : {
+
+    },
+    "The following apps have been flagged:" : {
+
+    },
+    "the following apps:" : {
+
+    },
+    "The identifier of the source “%@” has changed." : {
+
+    },
+    "The latest version of %@ could not be determined." : {
+
+    },
+    "The marketplace ID for %@ could not be determined." : {
+
+    },
+    "The marketplace ID for %@ does not match the one specified by the source." : {
+
+    },
+    "The more you open AltStore, the more chances it's given to refresh apps in the background." : {
+
+    },
+    "The more you use AltStore, the more often iOS will allow it to refresh apps in the background." : {
+
+    },
+    "The operation is forbidden." : {
+
+    },
+    "The operation returned an unknown result." : {
+
+    },
+    "The operation timed out." : {
+
+    },
+    "The OTA download URL for %@ could not be determined." : {
+
+    },
+    "the same bundle identifier" : {
+
+    },
+    "The SHA-256 hash of %@ does not match the hash specified by the source." : {
+
+    },
+    "The source" : {
+
+    },
+    "The source “%@”" : {
+
+    },
+    "The source “%@” contains %@ for %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The source “%1$@” contains %2$@ for %3$@."
+          }
+        }
+      }
+    },
+    "The source “%@” contains multiple apps with %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The source “%1$@” contains multiple apps with %2$@."
+          }
+        }
+      }
+    },
+    "The source “%@” contains notarized apps, which are not supported by this version of AltStore." : {
+
+    },
+    "The source “%@” has been blocked by AltStore for security reasons." : {
+
+    },
+    "The source “%@” is not supported by this version of AltStore." : {
+
+    },
+    "The task timed out after %@ seconds." : {
+
+    },
+    "The version of %@ does not match the version specified by the source." : {
+
+    },
+    "There are no AltStore sources." : {
+
+    },
+    "These are permissions required by “%@” that AltStore does not recognize. Make sure you understand them before continuing." : {
+
+    },
+    "These permissions must be declared by the source in order for AltStore to install this app:" : {
+
+    },
+    "These updates don't support iOS %@. Please update your device to the latest iOS version to install them." : {
+
+    },
+    "this app" : {
+
+    },
+    "This app" : {
+
+    },
+    "This app supports custom pledges. Pledge any amount on Patreon to receive access." : {
+
+    },
+    "This device is running iOS %@, but %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "This device is running iOS %1$@, but %2$@"
+          }
+        }
+      }
+    },
+    "This jailbreak has an untethered version, which means %@ will never expire — even after 7 days or rebooting the device.\n\nInstalling an untethered jailbreak requires a few extra steps, but AltStore will walk you through the process.\n\nWould you like to continue? " : {
+
+    },
+    "This jailbreak is untethered, which means %@ will never expire — even after 7 days or rebooting the device.\n\nInstalling an untethered jailbreak requires a few extra steps, but AltStore will walk you through the process.\n\nWould you like to continue? " : {
+
+    },
+    "This version of “%@” requires additional permissions." : {
+
+    },
+    "This will also erase all backup data for this app." : {
+
+    },
+    "This will remove all temporary files as well as backups for uninstalled apps." : {
+
+    },
+    "This will replace all data you currently have in %@." : {
+
+    },
+    "This will replace any previous backups. Please leave AltStore open until the backup is complete." : {
+
+    },
+    "This will take a few moments. Please do not turn off the screen or leave the app until patching is complete." : {
+
+    },
+    "This will update AltStore PAL to the latest beta version." : {
+
+    },
+    "To download %@, join this creator's Patreon by pressing “Join for free” on the next screen." : {
+
+    },
+    "Today" : {
+
+    },
+    "Try Again" : {
+
+    },
+    "Unable to Add Source" : {
+
+    },
+    "Unable to Change App Icon" : {
+
+    },
+    "Unable to Check for Updates" : {
+
+    },
+    "Unable to Clear Cache" : {
+
+    },
+    "Unable to Export Detailed Log" : {
+
+    },
+    "Unable to Fetch Apps" : {
+
+    },
+    "Unable to Fetch News" : {
+
+    },
+    "Unable to install %@." : {
+
+    },
+    "Unable to Launch AltStore" : {
+
+    },
+    "Unable to Load Recommended Sources" : {
+
+    },
+    "Unable to parse Patreon post URL." : {
+
+    },
+    "Unable to Prepare App" : {
+
+    },
+    "Unable to Redeem PAL Promo" : {
+
+    },
+    "Unable to Refresh “%@” Source" : {
+
+    },
+    "Unable to Refresh %@ Sources" : {
+
+    },
+    "Unable to Refresh Store" : {
+
+    },
+    "Unable to Remove Source" : {
+
+    },
+    "Unable to update %@." : {
+
+    },
+    "Undeclared Permissions" : {
+
+    },
+    "Unknown Source" : {
+
+    },
+    "Unlink %@" : {
+
+    },
+    "Unlink Patreon Account" : {
+
+    },
+    "Unsupported iOS Version" : {
+
+    },
+    "Unsupported Update Available" : {
+
+    },
+    "Unsupported Updates Available" : {
+
+    },
+    "Untethering Recommended" : {
+
+    },
+    "Untethering Required" : {
+
+    },
+    "Untethering this jailbreak will prevent %@ from expiring, even after 7 days or rebooting the device. Are you sure you want to install without untethering?" : {
+
+    },
+    "update" : {
+
+    },
+    "Update" : {
+
+    },
+    "Update %@" : {
+
+    },
+    "Version %@" : {
+
+    },
+    "View All" : {
+
+    },
+    "View All Apps" : {
+
+    },
+    "View Error" : {
+
+    },
+    "View More Details" : {
+
+    },
+    "View Patreon" : {
+
+    },
+    "View Permisions" : {
+
+    },
+    "View Recommended Sources" : {
+
+    },
+    "What are inactive apps?" : {
+
+    },
+    "What are sources?" : {
+
+    },
+    "While AltStore 2.0 is in beta, you may choose to ignore this warning at your own risk until the source is updated." : {
+
+    },
+    "wired AltServer" : {
+
+    },
+    "Would you like to add the source “%@”?" : {
+
+    },
+    "Would you like to download the last version compatible with this device instead?" : {
+
+    },
+    "Would you like to remove this app's extensions so they don't count towards your limit?" : {
+
+    },
+    "You are not signed in." : {
+
+    },
+    "You can register another App ID in %@." : {
+
+    },
+    "You cannot register more than 10 App IDs within a 7 day period." : {
+
+    },
+    "You must add this source before installing apps from it.\n\n“%@” will begin downloading once it has been added." : {
+
+    },
+    "You must also delete it from the home screen to fully uninstall the app." : {
+
+    },
+    "You will no longer be able to install or refresh any apps that require pledges." : {
+
+    },
+    "You will no longer be able to install or refresh apps once you sign out." : {
+
+    },
+    "You will no longer be able to install or update any apps that require pledges." : {
+
+    },
+    "You're signed into Patreon but haven't connected your account with AltStore.\n\nPlease connect your account to download Patreon-exclusive apps." : {
+
+    },
+    "You've received 1 month of free access to our “Early Adopter” Patreon tier!\n\nMake sure you have joined our Patreon campaign as a free member and connected your Patreon account in Settings." : {
+
+    },
+    "Your Apple ID has no developer teams." : {
+
+    },
+    "your device's iOS version" : {
+
+    },
+    "Your pledge is no longer active. Please renew it to continue using %@ normally." : {
+
+    }
+  },
+  "version" : "1.1"
+}

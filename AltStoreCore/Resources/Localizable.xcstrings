@@ -1,0 +1,335 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      }
+    },
+    "%@ does not have any app versions." : {
+
+    },
+    "%@ error %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ error %2$@."
+          }
+        }
+      }
+    },
+    "%@ is currently locked." : {
+
+    },
+    "%@ is not currently running on %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ is not currently running on %2$@."
+          }
+        }
+      }
+    },
+    "%@ received an invalid request from AltServer." : {
+
+    },
+    "%@ requires %@ or later." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ requires %2$@ or later."
+          }
+        }
+      }
+    },
+    "Activate %@ Failed" : {
+
+    },
+    "AltServer could not connect to Mail plug-in." : {
+
+    },
+    "AltServer could not establish a connection to AltStore." : {
+
+    },
+    "AltServer could not establish a secure connection to %@." : {
+
+    },
+    "AltServer could not find this device." : {
+
+    },
+    "AltServer could not write data to this device." : {
+
+    },
+    "AltServer does not support this request." : {
+
+    },
+    "AltServer received an invalid request." : {
+
+    },
+    "AltServer received an invalid response from %@." : {
+
+    },
+    "AltServer sent an invalid response." : {
+
+    },
+    "AltServer's connection to %@ timed out." : {
+
+    },
+    "AltStore received an unknown response from AltServer." : {
+
+    },
+    "AltStore's database could not be saved." : {
+
+    },
+    "An error occured while removing the app." : {
+
+    },
+    "An error occurred while installing the app." : {
+
+    },
+    "An unknown error occured." : {
+
+    },
+    "An unknown error occurred." : {
+
+    },
+    "At least one app" : {
+
+    },
+    "Backup %@ Failed" : {
+
+    },
+    "CarPlay" : {
+
+    },
+    "Connection error code: %@" : {
+
+    },
+    "Could not find profile" : {
+
+    },
+    "Deactivate %@ Failed" : {
+
+    },
+    "Debug" : {
+
+    },
+    "Debug Description" : {
+
+    },
+    "Default" : {
+
+    },
+    "Developer" : {
+
+    },
+    "Enable JIT for %@ Failed" : {
+
+    },
+    "Entertainment" : {
+
+    },
+    "Entitlement" : {
+
+    },
+    "Error" : {
+
+    },
+    "Error code: %@" : {
+
+    },
+    "Error Description" : {
+
+    },
+    "Failure" : {
+
+    },
+    "Failure Reason" : {
+
+    },
+    "Fault" : {
+
+    },
+    "Free Developer Account" : {
+
+    },
+    "Games" : {
+
+    },
+    "Info" : {
+
+    },
+    "Install %@ Failed" : {
+
+    },
+    "Invalid access token." : {
+
+    },
+    "Last Updated" : {
+
+    },
+    "Lifestyle" : {
+
+    },
+    "Make sure Mail is running and the plug-in is enabled in Mail's preferences." : {
+
+    },
+    "Make sure the app is running in the foreground on %@ then try again." : {
+
+    },
+    "Make sure you have trusted this device with your computer and Wi-Fi sync is enabled." : {
+
+    },
+    "Name" : {
+
+    },
+    "No connected Patreon account." : {
+
+    },
+    "Notice" : {
+
+    },
+    "one or more apps" : {
+
+    },
+    "Organization" : {
+
+    },
+    "Other" : {
+
+    },
+    "Permission" : {
+
+    },
+    "Photo & Video" : {
+
+    },
+    "Please deactivate a sideloaded app in order to install another one.\n\nIf you're running iOS 13.5 or later, make sure “Offload Unused Apps” is disabled in Settings > iTunes & App Stores, then install or delete all offloaded apps." : {
+
+    },
+    "Please deactivate a sideloaded app with AltStore in order to install another app.\n\nIf you're running iOS 13.5 or later, make sure 'Offload Unused Apps' is disabled in Settings > iTunes & App Stores, then install or delete all offloaded apps to prevent them from erroneously counting towards this limit." : {
+
+    },
+    "Please try again later." : {
+
+    },
+    "Please unlock the device with your passcode and try again." : {
+
+    },
+    "Privacy Permission" : {
+
+    },
+    "Recovery Suggestion" : {
+
+    },
+    "Refresh %@ Failed" : {
+
+    },
+    "Restore %@ Failed" : {
+
+    },
+    "Social" : {
+
+    },
+    "Source File" : {
+
+    },
+    "Source Line" : {
+
+    },
+    "The app is in an invalid format." : {
+
+    },
+    "The cached permissions for %@ do not match the source." : {
+
+    },
+    "The cached versions for %@ do not match the source." : {
+
+    },
+    "The connection to AltServer was lost." : {
+
+    },
+    "The Developer disk located at %@ is incompatible with %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The Developer disk located at %1$@ is incompatible with %2$@."
+          }
+        }
+      }
+    },
+    "the device" : {
+
+    },
+    "The device" : {
+
+    },
+    "The disk is incompatible with %@." : {
+
+    },
+    "The Patreon API rate limit has been exceeded." : {
+
+    },
+    "The provided anisette data is invalid." : {
+
+    },
+    "The requested app" : {
+
+    },
+    "There was an error connecting to the device." : {
+
+    },
+    "There was an issue communicating with the usbmuxd daemon." : {
+
+    },
+    "this device's OS version" : {
+
+    },
+    "Title" : {
+
+    },
+    "Today" : {
+
+    },
+    "Undefined" : {
+
+    },
+    "Underlying Error" : {
+
+    },
+    "Underlying Errors" : {
+
+    },
+    "Unknown" : {
+
+    },
+    "Update %@ Failed" : {
+
+    },
+    "Utilities" : {
+
+    },
+    "Yesterday" : {
+
+    },
+    "You cannot activate more than 3 apps with a non-developer Apple ID." : {
+
+    },
+    "your device" : {
+
+    },
+    "Your device must be running iOS 12.2 or later to install AltStore." : {
+
+    }
+  },
+  "version" : "1.1"
+}
