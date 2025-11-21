@@ -40,7 +40,15 @@ class ErrorLogViewController: UITableViewController
     private var _exportedLogURL: URL?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        if #unavailable(iOS 26)
+        {
+            return .lightContent
+        }
+        else
+        {
+            // Since we've removed the colored nav bar on iOS 26
+            return .default
+        }
     }
     
     override func viewDidLoad()
@@ -180,6 +188,15 @@ private extension ErrorLogViewController
             let cell = cell as! ErrorLogTableViewCell
             cell.appIconImageView.image = image
             cell.appIconImageView.isIndicatingActivity = false
+            
+            if let error
+            {
+                Logger.main.error("Failed to load app icon: \(error.localizedDescription, privacy: .public)")
+            }
+            else
+            {
+                cell.appIconImageView.backgroundColor = .clear
+            }
         }
         
         let placeholderView = RSTPlaceholderView()

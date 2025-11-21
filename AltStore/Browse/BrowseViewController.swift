@@ -288,6 +288,10 @@ private extension BrowseViewController
                 let app = dataSource.item(at: indexPath)
                 Logger.main.debug("Failed to load app icon from \(app.iconURL, privacy: .public). \(error.localizedDescription, privacy: .public)")
             }
+            else
+            {
+                cell.bannerView.iconImageView.backgroundColor = .clear
+            }
         }
         
         return dataSource

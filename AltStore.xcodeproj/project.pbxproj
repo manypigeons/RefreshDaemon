@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A77E3D272F3D92436FAC272 /* Pods_AltStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EEAA842DA87A88A870053B /* Pods_AltStore.framework */; };
+		82CB1FB32EBABB0100C8E822 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 82CB1FB22EBABB0100C8E822 /* AppIcon.icon */; };
 		A8BCEBEAC0620CF80A2FD26D /* Pods_AltServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3822AB1C4CF1D4CDF7445D /* Pods_AltServer.framework */; };
 		BF02419622F2199300129732 /* RefreshAttemptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02419522F2199300129732 /* RefreshAttemptsViewController.swift */; };
 		BF0241AA22F29CCD00129732 /* UserDefaults+AltServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0241A922F29CCD00129732 /* UserDefaults+AltServer.swift */; };
@@ -687,6 +688,7 @@
 /* Begin PBXFileReference section */
 		11611D46F8A7C8B928E8156B /* Pods-AltServer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltServer.debug.xcconfig"; path = "Target Support Files/Pods-AltServer/Pods-AltServer.debug.xcconfig"; sourceTree = "<group>"; };
 		589BA531D903B28F292063E5 /* Pods-AltServer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltServer.release.xcconfig"; path = "Target Support Files/Pods-AltServer/Pods-AltServer.release.xcconfig"; sourceTree = "<group>"; };
+		82CB1FB22EBABB0100C8E822 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		A136EE677716B80768E9F0A2 /* Pods-AltStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltStore.release.xcconfig"; path = "Target Support Files/Pods-AltStore/Pods-AltStore.release.xcconfig"; sourceTree = "<group>"; };
 		BF02419522F2199300129732 /* RefreshAttemptsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshAttemptsViewController.swift; sourceTree = "<group>"; };
 		BF0241A922F29CCD00129732 /* UserDefaults+AltServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AltServer.swift"; sourceTree = "<group>"; };
@@ -2050,6 +2052,7 @@
 				BF770E6822BD57DD002A40FE /* Silence.m4a */,
 				D50F7FF02C5BFEE70064F7CE /* PrivacyInfo.xcprivacy */,
 				D5784E3E2CC2E67B00DAC00E /* AltMarketplace.cer */,
+				82CB1FB22EBABB0100C8E822 /* AppIcon.icon */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -2941,6 +2944,7 @@
 				D59162AD29BA616A005CBF47 /* SourceHeaderView.xib in Resources */,
 				BFE60738231ADF49002B0E8E /* Settings.storyboard in Resources */,
 				D5144BA82B8684EF00738A5C /* Icons.xcassets in Resources */,
+				82CB1FB32EBABB0100C8E822 /* AppIcon.icon in Resources */,
 				D57DF638271E32F000677701 /* PatchApp.storyboard in Resources */,
 				D5399FB02BE56B120038DDEF /* JoinPatreonViewController.xib in Resources */,
 				BFD2477A2284B9A700981D42 /* LaunchScreen.storyboard in Resources */,

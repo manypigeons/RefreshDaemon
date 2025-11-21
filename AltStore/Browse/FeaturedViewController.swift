@@ -284,7 +284,11 @@ private extension FeaturedViewController
             if let error, let dataSource
             {
                 let app = dataSource.item(at: indexPath)
-                Logger.main.debug("Failed to app icon from \(app.iconURL, privacy: .public). \(error.localizedDescription, privacy: .public)")
+                Logger.main.debug("Failed to load app icon from \(app.iconURL, privacy: .public). \(error.localizedDescription, privacy: .public)")
+            }
+            else
+            {
+                cell.bannerView.iconImageView.backgroundColor = .clear
             }
         }
         
@@ -423,7 +427,11 @@ private extension FeaturedViewController
             if let error = error, let dataSource
             {
                 let app = dataSource.item(at: indexPath)
-                Logger.main.debug("Failed to app icon from \(app.iconURL, privacy: .public). \(error.localizedDescription, privacy: .public)")
+                Logger.main.debug("Failed to load app icon from \(app.iconURL, privacy: .public). \(error.localizedDescription, privacy: .public)")
+            }
+            else
+            {
+                cell.bannerView.iconImageView.backgroundColor = .clear
             }
         }
         
