@@ -80,7 +80,7 @@ private struct PatreonParameters: Decodable
 }
 
 @objc(StoreApp)
-public class StoreApp: NSManagedObject, Decodable, Fetchable, @unchecked Sendable
+public class StoreApp: NSManagedObject, Decodable, Fetchable, Federatable, @unchecked Sendable
 {
     /* Properties */
     @NSManaged public private(set) var name: String
@@ -121,6 +121,13 @@ public class StoreApp: NSManagedObject, Decodable, Fetchable, @unchecked Sendabl
     
     @nonobjc public var pledgeAmount: Decimal? { _pledgeAmount as? Decimal }
     @NSManaged @objc(pledgeAmount) private var _pledgeAmount: NSDecimalNumber?
+    
+    // Federation
+    @NSManaged public var statusID: String?
+    @NSManaged public var federatedURL: URL?
+    @NSManaged public var likesCount: Int32
+    @NSManaged public var boostsCount: Int32
+    @NSManaged public var commentsCount: Int32
     
     @NSManaged public var sortIndex: Int32
     @NSManaged public var featuredSortID: String?
