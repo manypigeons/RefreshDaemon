@@ -131,7 +131,9 @@ class MyAppsViewController: UICollectionViewController, PeekPopPreviewing
         
         self.update()
         
+        #if !MARKETPLACE
         self.fetchAppIDs()
+        #endif
         
         self.updateFediverseInteractionsIfNeeded()
     }
