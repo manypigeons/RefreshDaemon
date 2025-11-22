@@ -18,10 +18,10 @@ import Roxas
 
 import Nuke
 
-private let maximumCollapsedUpdatesCount = 2
-
 extension MyAppsViewController
 {
+    static let maximumCollapsedUpdatesCount = 2
+    
     private enum Section: Int, CaseIterable
     {
         case noUpdates
@@ -225,7 +225,7 @@ private extension MyAppsViewController
         fetchRequest.returnsObjectsAsFaults = false
         
         let dataSource = RSTFetchedResultsCollectionViewPrefetchingDataSource<InstalledApp, UIImage>(fetchRequest: fetchRequest, managedObjectContext: DatabaseManager.shared.viewContext)
-        dataSource.liveFetchLimit = maximumCollapsedUpdatesCount
+        dataSource.liveFetchLimit = Self.maximumCollapsedUpdatesCount
         dataSource.cellIdentifierHandler = { _ in "UpdateCell" }
         dataSource.cellConfigurationHandler = { [weak self] (cell, installedApp, indexPath) in
             guard let self = self else { return }
@@ -779,7 +779,7 @@ private extension MyAppsViewController
             UIView.animate(withDuration: 0.3, animations: {
                 if self.isUpdateSectionCollapsed
                 {
-                    self.updatesDataSource.liveFetchLimit = maximumCollapsedUpdatesCount
+                    self.updatesDataSource.liveFetchLimit = Self.maximumCollapsedUpdatesCount
                     self.expandedAppUpdates.removeAll()
                     
                     for case let cell as UpdateCollectionViewCell in visibleCells
@@ -1819,7 +1819,7 @@ extension MyAppsViewController
                     headerView.button.titleLabel?.transform = CGAffineTransform.identity.rotated(by: .pi)
                 }
                 
-                headerView.isHidden = (self.updatesDataSource.fetchedResultsController.fetchedObjects?.count ?? 0 <= maximumCollapsedUpdatesCount)
+                headerView.isHidden = (self.updatesDataSource.fetchedResultsController.fetchedObjects?.count ?? 0 <= Self.maximumCollapsedUpdatesCount)
                 
                 headerView.button.layoutIfNeeded()
             }
@@ -2222,7 +2222,7 @@ extension MyAppsViewController: UICollectionViewDelegateFlowLayout
         {
         case .noUpdates: return .zero
         case .updates:
-            let height: CGFloat = (self.updatesDataSource.fetchedResultsController.fetchedObjects?.count ?? 0 > maximumCollapsedUpdatesCount) ? 26 : 0
+            let height: CGFloat = (self.updatesDataSource.fetchedResultsController.fetchedObjects?.count ?? 0 > Self.maximumCollapsedUpdatesCount) ? 26 : 0
             return CGSize(width: collectionView.bounds.width, height: height)
             
         case .activeApps: return CGSize(width: collectionView.bounds.width, height: 29)

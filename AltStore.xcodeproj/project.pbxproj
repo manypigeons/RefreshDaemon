@@ -479,6 +479,7 @@
 		D5CF17262B96DD27002EC4C7 /* InstallMarketplaceAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CF17252B96DD27002EC4C7 /* InstallMarketplaceAppViewController.swift */; };
 		D5CF568C2A0D8EEC006D93E2 /* VerificationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CF56812A0D83F9006D93E2 /* VerificationError.swift */; };
 		D5D3BFB22D4D87A5000FFFAF /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3BFB12D4D87A5000FFFAF /* Media.swift */; };
+		D5D574C52ED0FC2A00FBEE87 /* UpdateFediverseInteractionsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D574C42ED0FC1F00FBEE87 /* UpdateFediverseInteractionsOperation.swift */; };
 		D5DAE0962804DF430034D8D4 /* UpdatePatronsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAE0952804DF430034D8D4 /* UpdatePatronsOperation.swift */; };
 		D5DB145A28F9DC5A00A8F606 /* ALTLocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB145828F9DC1000A8F606 /* ALTLocalizedError.swift */; };
 		D5DB145B28F9DC5C00A8F606 /* ALTLocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB145828F9DC1000A8F606 /* ALTLocalizedError.swift */; };
@@ -1168,6 +1169,7 @@
 		D5CF17252B96DD27002EC4C7 /* InstallMarketplaceAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallMarketplaceAppViewController.swift; sourceTree = "<group>"; };
 		D5CF56812A0D83F9006D93E2 /* VerificationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationError.swift; sourceTree = "<group>"; };
 		D5D3BFB12D4D87A5000FFFAF /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		D5D574C42ED0FC1F00FBEE87 /* UpdateFediverseInteractionsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateFediverseInteractionsOperation.swift; sourceTree = "<group>"; };
 		D5DAE0952804DF430034D8D4 /* UpdatePatronsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePatronsOperation.swift; sourceTree = "<group>"; };
 		D5DB145828F9DC1000A8F606 /* ALTLocalizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALTLocalizedError.swift; sourceTree = "<group>"; };
 		D5DB81632B0410BC003F5F8B /* AppSorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSorting.swift; sourceTree = "<group>"; };
@@ -2164,6 +2166,7 @@
 				D5E1E7C028077DE90016FC96 /* UpdateKnownSourcesOperation.swift */,
 				D5ACE84428E3B8450021CAB9 /* ClearAppCacheOperation.swift */,
 				D561AF812B21669400BF59C6 /* VerifyAppPledgeOperation.swift */,
+				D5D574C42ED0FC1F00FBEE87 /* UpdateFediverseInteractionsOperation.swift */,
 				BF7B44062725A4B8005288A4 /* Patch App */,
 			);
 			path = Operations;
@@ -3495,6 +3498,7 @@
 				BFF0B6942321CB85007A79E1 /* AuthenticationViewController.swift in Sources */,
 				D561AF822B21669400BF59C6 /* VerifyAppPledgeOperation.swift in Sources */,
 				BF3432FB246B894F0052F4A1 /* BackupAppOperation.swift in Sources */,
+				D5D574C52ED0FC2A00FBEE87 /* UpdateFediverseInteractionsOperation.swift in Sources */,
 				BF9ABA4922DD0742008935CF /* ScreenshotCollectionViewCell.swift in Sources */,
 				BF9ABA4D22DD16DE008935CF /* PillButton.swift in Sources */,
 				D5C0E7672AD9C75900530CA4 /* AppCardCollectionViewCell.swift in Sources */,
