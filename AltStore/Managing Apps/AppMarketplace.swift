@@ -590,10 +590,29 @@ private extension AppMarketplace
                 throw OperationError.unknown(failureReason: String(localized: "Could not determine presenting context."))
             }
             
+            #if BETA
+            
+            // Installing regular AltStore from beta, which requires uninstalling + reinstalling :(
+            
+            let action = await UIAlertAction(title: String(localized: "View Instructions"), style: .default)
+            try await presentingViewController.presentConfirmationAlert(title: String(localized: "Switch to public version of AltStore PAL?"), message: String(localized: "You must delete AltStore PAL then reinstall it to switch back to the public version.\n\nYour apps will remain installed."), primaryAction: action)
+            
+            await MainActor.run {
+                let openURL = URL(string: "https://altstore.io/uninstall-pal-beta")!
+                UIApplication.shared.open(openURL)
+            }
+            
+            // Cancel installation and let user manually switch back to public version.
+            throw CancellationError()
+            
+            #else
+            
             // Installing AltStore beta from regular AltStore, which is equivalent to updating to specific beta versions of PAL.
             
             let action = await UIAlertAction(title: String(localized: "Update"), style: .default)
             try await presentingViewController.presentConfirmationAlert(title: String(localized: "Switch to beta version of AltStore PAL?"), message: String(localized: "This will update AltStore PAL to the latest beta version."), primaryAction: action)
+            
+            #endif
         }
                 
         let installMarketplaceAppViewController = await MainActor.run { [operation] () -> InstallMarketplaceAppViewController? in
