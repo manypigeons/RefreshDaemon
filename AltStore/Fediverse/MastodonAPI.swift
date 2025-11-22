@@ -132,3 +132,39 @@ extension MastodonAPI
         return toots
     }
 }
+
+extension MastodonAPI
+{
+    func fetchFavorites(tootID: Int, limit: Int? = 20) async throws -> [Account]
+    {
+        // TODO: Handle rate/fetch limits
+        
+        var endpoint = MastodonAPI.instanceURL.appendingPathComponent("api/v1/statuses/\(tootID)/favourited_by").absoluteString
+        if let limit
+        {
+            endpoint += "?limit=\(limit)"
+        }
+        
+        guard let requestURL = URL(string: endpoint) else { throw MastodonError.unknown() }
+        
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = "GET"
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        if let httpResponse = response as? HTTPURLResponse
+        {
+            switch httpResponse.statusCode
+            {
+            case 200...299: break
+            case 401: throw MastodonError.unauthorized()
+            default: throw MastodonError.http(statusCode: httpResponse.statusCode)
+            }
+        }
+        
+        let decoder = Foundation.JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        
+        let accounts = try decoder.decode([Account].self, from: data)
+        return accounts
+    }
+}

@@ -259,7 +259,7 @@ private extension BrowseViewController
             cell.layoutMargins.right = self.view.layoutMargins.right
             
             let showSourceIcon = (self.source == nil) // Hide source icon if redundant
-            cell.configure(for: app, showSourceIcon: showSourceIcon)
+            cell.configure(for: app, sharingViewController: self, showSourceIcon: showSourceIcon)
             
             cell.bannerView.iconImageView.image = nil
             cell.bannerView.iconImageView.isIndicatingActivity = true

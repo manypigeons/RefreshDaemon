@@ -283,6 +283,18 @@ private extension MyAppsViewController
             
             cell.versionDescriptionTextView.moreButton.addTarget(self, action: #selector(MyAppsViewController.toggleUpdateCellMode(_:)), for: .primaryActionTriggered)
             
+            if latestSupportedVersion.federatedURL != nil
+            {
+                cell.fediverseInteractionsView.isHidden = false
+                cell.fediverseInteractionsView.tintColor = app.tintColor ?? .altPrimary
+                cell.fediverseInteractionsView.shareHandler = { [weak self] _ in self }
+                cell.fediverseInteractionsView.configure(with: latestSupportedVersion)
+            }
+            else
+            {
+                cell.fediverseInteractionsView.isHidden = true
+            }
+            
             cell.setNeedsLayout()
             
             // Below lines are necessary to avoid "more" button layout issues.

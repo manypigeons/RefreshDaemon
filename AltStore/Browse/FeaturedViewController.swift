@@ -381,9 +381,11 @@ private extension FeaturedViewController
         // Ensure sources with no remaining apps always come last.
         let dataSource = RSTCompositeCollectionViewPrefetchingDataSource<StoreApp, UIImage>(dataSources: [primaryDataSource, secondaryDataSource])
         dataSource.cellIdentifierHandler = { _ in ReuseID.featuredApp.rawValue }
-        dataSource.cellConfigurationHandler = { cell, storeApp, indexPath in
+        dataSource.cellConfigurationHandler = { [weak self] cell, storeApp, indexPath in
+            guard let self else { return }
+            
             let cell = cell as! AppCardCollectionViewCell
-            cell.configure(for: storeApp)
+            cell.configure(for: storeApp, sharingViewController: self)
             cell.prefersPagingScreenshots = false
             
             cell.bannerView.button.addTarget(self, action: #selector(FeaturedViewController.performAppAction), for: .primaryActionTriggered)

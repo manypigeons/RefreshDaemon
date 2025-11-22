@@ -202,6 +202,18 @@ private extension NewsViewController
                 cell.imageView.isHidden = true
             }
             
+            if newsItem.federatedURL != nil
+            {
+                cell.fediverseInteractionsView.isHidden = false
+                cell.fediverseInteractionsView.tintColor = newsItem.tintColor
+                cell.fediverseInteractionsView.shareHandler = { [weak self] _ in self }
+                cell.fediverseInteractionsView.configure(with: newsItem, isOpaque: true)
+            }
+            else
+            {
+                cell.fediverseInteractionsView.isHidden = true
+            }
+            
             cell.isAccessibilityElement = true
             cell.accessibilityLabel = (cell.titleLabel.text ?? "") + ". " + (cell.captionLabel.text ?? "")
             
