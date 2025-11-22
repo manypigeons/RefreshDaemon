@@ -367,10 +367,14 @@ private extension FetchSourceOperation
             {
                 async let sourceRecord = iCloudAPI.shared.fetchSource(id: sourceID)
                 async let newsItemRecords = iCloudAPI.shared.fetchNewsItems(for: source)
+                async let appRecords = iCloudAPI.shared.fetchApps(for: source)
+                async let appVersionRecords = iCloudAPI.shared.fetchAppVersions(for: source)
                 
                 let newsItemRecordsByID: [String: iCloudAPI.NewsItemRecord] = try await newsItemRecords.reduce(into: [:]) { $0[$1.identifier] = $1 }
+                let appRecordsByID: [String: iCloudAPI.AppRecord] = try await appRecords.reduce(into: [:]) { $0[$1.bundleID] = $1 }
+                let appVersionRecordsByID: [String: iCloudAPI.AppVersionRecord] = try await appVersionRecords.reduce(into: [:]) { $0[$1.globallyUniqueID] = $1 }
                 
-                let recordsCount = try await newsItemRecords.count
+                let recordsCount = try await newsItemRecords.count + appRecords.count + appVersionRecords.count
                 guard let username = try await sourceRecord?.username else { throw OperationError.unknown(failureReason: NSLocalizedString("Invalid fediverse username.", comment: "")) }
                                 
                 await $source.perform { source in
@@ -381,7 +385,28 @@ private extension FetchSourceOperation
                         else { continue }
                         
                         newsItem.statusID = statusID
-                        newsItem.federatedURL = URL(string: "https://explore.alt.store/@\(username)/\(statusID)")
+                        newsItem.federatedURL = URL(string: "\(MastodonAPI.instanceURL)/@\(username)/\(statusID)")
+                    }
+                    
+                    for app in source.apps
+                    {
+                        guard
+                            let record = appRecordsByID[app.bundleIdentifier], let statusID = record.statusID
+                        else { continue }
+                        
+                        app.statusID = statusID
+                        app.federatedURL = URL(string: "\(MastodonAPI.instanceURL)/@\(username)/\(statusID)")
+                        
+                        for appVersion in app.versions
+                        {
+                            guard
+                                let globallyUniqueID = appVersion.globallyUniqueID, let record = appVersionRecordsByID[globallyUniqueID],
+                                let statusID = record.statusID
+                            else { continue }
+                            
+                            appVersion.statusID = statusID
+                            appVersion.federatedURL = URL(string: "\(MastodonAPI.instanceURL)/@\(username)/\(statusID)")
+                        }
                     }
                     
                     Logger.main.info("Updated Fediverse metadata for \(recordsCount) records in source \(sourceID, privacy: .public) in \(CFAbsoluteTimeGetCurrent() - startTime) seconds.")

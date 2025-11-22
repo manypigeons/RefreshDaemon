@@ -46,6 +46,34 @@ extension iCloudAPI
         let results = try await self._fetchRecords(of: NewsItemRecord.self, query: query)
         return results
     }
+    
+    func fetchApps(@AsyncManaged for source: Source) async throws -> [AppRecord]
+    {
+        let sourceID = await $source.identifier
+        
+        let predicate = NSPredicate(format: "%K == %@", #keyPath(AppFields.sourceID), sourceID)
+        let sortDescriptor = NSSortDescriptor(keyPath: \AppFields.date, ascending: false)
+        
+        let query = CKQuery(recordType: AppRecord.recordType, predicate: predicate)
+        query.sortDescriptors = [sortDescriptor]
+        
+        let results = try await self._fetchRecords(of: AppRecord.self, query: query)
+        return results
+    }
+    
+    func fetchAppVersions(@AsyncManaged for source: Source) async throws -> [AppVersionRecord]
+    {
+        let sourceID = await $source.identifier
+        
+        let predicate = NSPredicate(format: "%K == %@", #keyPath(AppVersionFields.sourceID), sourceID)
+        let sortDescriptor = NSSortDescriptor(keyPath: \AppVersionFields.date, ascending: false)
+        
+        let query = CKQuery(recordType: AppVersionRecord.recordType, predicate: predicate)
+        query.sortDescriptors = [sortDescriptor]
+        
+        let results = try await self._fetchRecords(of: AppVersionRecord.self, query: query)
+        return results
+    }
 }
 
 private extension iCloudAPI

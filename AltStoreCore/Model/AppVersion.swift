@@ -177,6 +177,13 @@ public extension AppVersion
         let versionID = "\(self.version)|\(buildVersion)"
         return versionID
     }
+    
+    var globallyUniqueID: String? {
+        guard let sourceIdentifier = self.sourceID else { return nil }
+        
+        let globallyUniqueID = self.versionID + "|" + self.bundleIdentifier + "|" + sourceIdentifier
+        return globallyUniqueID
+    }
 }
 
 public extension AppVersion

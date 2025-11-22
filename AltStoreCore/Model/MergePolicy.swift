@@ -240,6 +240,14 @@ open class MergePolicy: RSTRelationshipPreservingMergePolicy
                     contextApp.featuredSortID = featuredSortID
                 }
                 
+                // Revert null Fediverse interactions to database values.
+                if contextApp.value(forKey: #keyPath(StoreApp.likesCount)) == nil || contextApp.value(forKey: #keyPath(StoreApp.boostsCount)) == nil || contextApp.value(forKey: #keyPath(StoreApp.commentsCount)) == nil
+                {
+                    contextApp.likesCount = databaseObject.likesCount
+                    contextApp.boostsCount = databaseObject.boostsCount
+                    contextApp.commentsCount = databaseObject.commentsCount
+                }
+                
             case let databaseObject as Source:
                 guard let conflictedObject = conflict.conflictingObjects.first as? Source else { break }
                 
@@ -309,6 +317,17 @@ open class MergePolicy: RSTRelationshipPreservingMergePolicy
                 
                 // Revert null Fediverse interactions to database values.
                 if contextObject.value(forKey: #keyPath(NewsItem.likesCount)) == nil || contextObject.value(forKey: #keyPath(NewsItem.boostsCount)) == nil || contextObject.value(forKey: #keyPath(NewsItem.commentsCount)) == nil
+                {
+                    contextObject.likesCount = databaseObject.likesCount
+                    contextObject.boostsCount = databaseObject.boostsCount
+                    contextObject.commentsCount = databaseObject.commentsCount
+                }
+                
+            case let databaseObject as AppVersion:
+                guard let contextObject = conflict.conflictingObjects.first as? AppVersion else { break }
+                
+                // Revert null Fediverse interactions to database values.
+                if contextObject.value(forKey: #keyPath(AppVersion.likesCount)) == nil || contextObject.value(forKey: #keyPath(AppVersion.boostsCount)) == nil || contextObject.value(forKey: #keyPath(AppVersion.commentsCount)) == nil
                 {
                     contextObject.likesCount = databaseObject.likesCount
                     contextObject.boostsCount = databaseObject.boostsCount

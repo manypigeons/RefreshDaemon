@@ -40,6 +40,8 @@ extension iCloudAPI
 
     typealias SourceRecord = CloudRecord<SourceFields>
     typealias NewsItemRecord = CloudRecord<NewsItemFields>
+    typealias AppRecord = CloudRecord<AppFields>
+    typealias AppVersionRecord = CloudRecord<AppVersionFields>
 
     @objcMembers
     class SourceFields: CloudRecordFields
@@ -49,6 +51,17 @@ extension iCloudAPI
         var sourceID: String
         var url: URL
         var username: String
+    }
+    
+    @objcMembers
+    class AppFields: CloudRecordFields
+    {
+        static var recordType: CKRecord.RecordType { "App" }
+        
+        var bundleID: String
+        var sourceID: String
+        var date: Date
+        var statusID: String?
     }
 
     @objcMembers
@@ -60,5 +73,27 @@ extension iCloudAPI
         var sourceID: String
         var date: Date
         var statusID: String?
+    }
+
+    @objcMembers
+    class AppVersionFields: CloudRecordFields
+    {
+        static var recordType: String { "AppVersion" }
+        
+        var date: Date
+        var versionID: String
+        
+        var sourceID: String
+        var appBundleID: String
+        
+        var statusID: String?
+    }
+}
+
+extension iCloudAPI.CloudRecord where Fields == iCloudAPI.AppVersionFields
+{
+    var globallyUniqueID: String {
+        let globallyUniqueID = self.versionID + "|" + self.appBundleID + "|" + self.sourceID
+        return globallyUniqueID
     }
 }

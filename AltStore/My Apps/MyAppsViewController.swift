@@ -61,6 +61,7 @@ class MyAppsViewController: UICollectionViewController, PeekPopPreviewing
     
     // Cache
     private var cachedUpdateSizes = [String: CGSize]()
+    private var updateFediverseInteractionsResult: Result<Void, Error>?
     
     required init?(coder aDecoder: NSCoder)
     {
@@ -131,6 +132,8 @@ class MyAppsViewController: UICollectionViewController, PeekPopPreviewing
         self.update()
         
         self.fetchAppIDs()
+        
+        self.updateFediverseInteractionsIfNeeded()
     }
     
     override func viewDidAppear(_ animated: Bool)
@@ -714,6 +717,51 @@ private extension MyAppsViewController
         
         UIView.performWithoutAnimation {
             self.collectionView.reloadSections([Section.activeApps.rawValue, Section.inactiveApps.rawValue])
+        }
+    }
+    
+    func updateFediverseInteractionsIfNeeded()
+    {
+        guard self.updateFediverseInteractionsResult == nil else { return }
+        
+        let startTime = CFAbsoluteTimeGetCurrent()
+        
+        Task<Void, Never>(priority: .utility) { @MainActor in
+            do
+            {
+                let storeApps = (self.updatesDataSource.fetchedResultsController.fetchedObjects ?? []).compactMap { $0.storeApp }
+                
+                let objectIDs = Set(storeApps.map(\.objectID))
+                let statusIDs = Set(storeApps.compactMap { $0.statusID })
+                
+                let toots = try await MastodonAPI.shared.fetchToots(ids: statusIDs)
+                let tootsByID = toots.reduce(into: [:]) { $0[$1.id] = $1 }
+                
+                let context = DatabaseManager.shared.persistentContainer.newBackgroundContext()
+                try await context.perform {
+                    
+                    let storeApps = objectIDs.compactMap { context.object(with: $0) as? StoreApp }
+                    for storeApp in storeApps
+                    {
+                        guard let statusID = storeApp.statusID, let toot = tootsByID[statusID] else { continue }
+                        storeApp.federatedURL = toot.url
+                        storeApp.likesCount = Int32(toot.favourites_count)
+                        storeApp.boostsCount = Int32(toot.reblogs_count)
+                        storeApp.commentsCount = Int32(toot.replies_count)
+                    }
+                    
+                    try context.save()
+                }
+                
+                Logger.main.info("Fetched \(toots.count) app update statuses in \(CFAbsoluteTimeGetCurrent() - startTime) seconds")
+                
+                self.updateFediverseInteractionsResult = .success(())
+            }
+            catch
+            {
+                Logger.main.error("Failed to fetch Fediverse interactions for app updates. \(error.localizedDescription, privacy: .public)")
+                self.updateFediverseInteractionsResult = .failure(error)
+            }
         }
     }
 }
@@ -1691,6 +1739,9 @@ private extension MyAppsViewController
                 toastView.addTarget(nil, action: #selector(TabBarController.presentSources), for: .touchUpInside)
                 toastView.show(in: self)
             }
+            
+            self.updateFediverseInteractionsResult = nil
+            self.updateFediverseInteractionsIfNeeded()
             
             self.isCheckingForUpdates = false
             

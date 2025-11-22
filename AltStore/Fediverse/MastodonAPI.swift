@@ -9,13 +9,22 @@
 import Foundation
 import AltStoreCore
 
-extension URL
+extension MastodonAPI
 {
     #if SANDBOX
-    fileprivate static let instanceURL = URL(string: "https://fedi.alt.store")!
+    static let instanceURL = URL(string: "https://fedi.alt.store")!
     #else
-    fileprivate static let instanceURL = URL(string: "https://explore.alt.store")!
+    static let instanceURL = URL(string: "https://explore.alt.store")!
     #endif
+}
+
+fileprivate extension MastodonAPI
+{
+    struct ConversationContext: Decodable
+    {
+        var ancestors: [Toot]
+        var descendants: [Toot]
+    }
 }
 
 struct MastodonError: ALTLocalizedError
@@ -94,7 +103,7 @@ extension MastodonAPI
         
         guard !ids.isEmpty else { return [] }
         
-        var endpoint = URL.instanceURL.appendingPathComponent("api/v1/statuses").absoluteString + "?limit=\(fetchLimit)"
+        var endpoint = MastodonAPI.instanceURL.appendingPathComponent("api/v1/statuses").absoluteString + "?limit=\(fetchLimit)"
         for id in ids
         {
             endpoint += "&id[]=\(id)"

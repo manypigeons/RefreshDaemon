@@ -647,6 +647,34 @@ public extension StoreApp
         return NSFetchRequest<StoreApp>(entityName: "StoreApp")
     }
     
+    class func browseTabFeaturedAppsFetchRequest() -> NSFetchRequest<StoreApp>
+    {
+        let fetchRequest = StoreApp.fetchRequest() as NSFetchRequest<StoreApp>
+        fetchRequest.returnsObjectsAsFaults = false
+        fetchRequest.sortDescriptors = [
+            // Sort by Source first to group into sections.
+            NSSortDescriptor(keyPath: \StoreApp._source?.featuredSortID, ascending: true),
+            
+            // Show uninstalled apps first.
+            // Sorting by StoreApp.installedApp crashes because InstalledApp does not respond to compare:
+            // Instead, sort by StoreApp.installedApp.storeApp.source.sourceIdentifier, which will be either nil OR source ID.
+            NSSortDescriptor(keyPath: \StoreApp.installedApp?.storeApp?.sourceIdentifier, ascending: true),
+            
+            // Show featured apps first.
+            // Sorting by StoreApp.featuringSource crashes because Source does not respond to compare:
+            // Instead, sort by StoreApp.featuringSource.identifier, which will be either nil OR source ID.
+            NSSortDescriptor(keyPath: \StoreApp.featuringSource?.identifier, ascending: false),
+            
+            // Randomize order within sections.
+            NSSortDescriptor(keyPath: \StoreApp.featuredSortID, ascending: true),
+            
+            // Sanity check to ensure stable ordering
+            NSSortDescriptor(keyPath: \StoreApp.bundleIdentifier, ascending: true)
+        ]
+        
+        return fetchRequest
+    }
+    
     class func makeAltStoreApp(version: String, buildVersion: String?, in context: NSManagedObjectContext) -> StoreApp
     {
         let app = StoreApp(context: context)
