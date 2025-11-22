@@ -362,6 +362,8 @@
 		D51AD27F29356B7B00967AAA /* ALTWrappedError.m in Sources */ = {isa = PBXBuildFile; fileRef = D51AD27D29356B7B00967AAA /* ALTWrappedError.m */; };
 		D51AD28029356B8000967AAA /* ALTWrappedError.m in Sources */ = {isa = PBXBuildFile; fileRef = D51AD27D29356B7B00967AAA /* ALTWrappedError.m */; };
 		D51E83822B8692DF0092FC61 /* AltStore16ToAltStore17.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D51E83812B8692DF0092FC61 /* AltStore16ToAltStore17.xcmappingmodel */; };
+		D526A40F2E32F75D00D2E768 /* MastodonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D526A40E2E32F75D00D2E768 /* MastodonAPI.swift */; };
+		D526A4112E32F80800D2E768 /* MastodonAPI+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = D526A4102E32F80700D2E768 /* MastodonAPI+Types.swift */; };
 		D52A2F972ACB40F700BDF8E3 /* Logger+AltStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52A2F962ACB40F700BDF8E3 /* Logger+AltStore.swift */; };
 		D52B4ABF2AF183F0005991C3 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B4ABE2AF183F0005991C3 /* WebViewController.swift */; };
 		D52C08EE28AEC37A006C4AE5 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52C08ED28AEC37A006C4AE5 /* AppVersion.swift */; };
@@ -386,6 +388,7 @@
 		D540E93828EE1BDE000F1B0F /* ErrorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540E93728EE1BDE000F1B0F /* ErrorDetailsViewController.swift */; };
 		D5418F172AD740890014ABD6 /* AppScreenshotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5418F162AD740890014ABD6 /* AppScreenshotCollectionViewCell.swift */; };
 		D54D13E62E5D19FD00FEC355 /* Federatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D13E52E5D19FD00FEC355 /* Federatable.swift */; };
+		D54D13C42E5CEEB800FEC355 /* iCloudAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D13C32E5CEEB800FEC355 /* iCloudAPI.swift */; };
 		D54DED1428CBC44B008B27A0 /* ErrorLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54DED1328CBC44B008B27A0 /* ErrorLogTableViewCell.swift */; };
 		D552B1D82A042A740066216F /* AppPermissionsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D552B1D72A042A740066216F /* AppPermissionsCard.swift */; };
 		D552DE382D39ADED00E737BE /* PatreonAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = D552DE372D39ADED00E737BE /* PatreonAPI.plist */; };
@@ -453,6 +456,7 @@
 		D5A645232AF5B5C50047D980 /* PatreonAPI+Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A645222AF5B5C50047D980 /* PatreonAPI+Responses.swift */; };
 		D5A645252AF5BC7F0047D980 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A645242AF5BC7F0047D980 /* UserAccount.swift */; };
 		D5ACE84528E3B8450021CAB9 /* ClearAppCacheOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ACE84428E3B8450021CAB9 /* ClearAppCacheOperation.swift */; };
+		D5AD66932ECFE08800964E26 /* iCloudAPI+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D13C52E5CEF2200FEC355 /* iCloudAPI+Types.swift */; };
 		D5AE997B2B64791E0068B366 /* AppMarketplace.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE997A2B64791E0068B366 /* AppMarketplace.swift */; };
 		D5B6F6A92AD75D01007EED5A /* ProcessInfo+Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6F6A82AD75D01007EED5A /* ProcessInfo+Previews.swift */; };
 		D5B6F6AB2AD76541007EED5A /* PreviewAppScreenshotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6F6AA2AD76541007EED5A /* PreviewAppScreenshotsViewController.swift */; };
@@ -1046,6 +1050,8 @@
 		D51AD27D29356B7B00967AAA /* ALTWrappedError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALTWrappedError.m; sourceTree = "<group>"; };
 		D51E83802B86926B0092FC61 /* AltStore 17.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AltStore 17.xcdatamodel"; sourceTree = "<group>"; };
 		D51E83812B8692DF0092FC61 /* AltStore16ToAltStore17.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = AltStore16ToAltStore17.xcmappingmodel; sourceTree = "<group>"; };
+		D526A40E2E32F75D00D2E768 /* MastodonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastodonAPI.swift; sourceTree = "<group>"; };
+		D526A4102E32F80700D2E768 /* MastodonAPI+Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MastodonAPI+Types.swift"; sourceTree = "<group>"; };
 		D52A2F962ACB40F700BDF8E3 /* Logger+AltStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+AltStore.swift"; sourceTree = "<group>"; };
 		D52B4ABE2AF183F0005991C3 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D52C08ED28AEC37A006C4AE5 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
@@ -1071,6 +1077,8 @@
 		D540E93728EE1BDE000F1B0F /* ErrorDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDetailsViewController.swift; sourceTree = "<group>"; };
 		D5418F162AD740890014ABD6 /* AppScreenshotCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenshotCollectionViewCell.swift; sourceTree = "<group>"; };
 		D54D13E52E5D19FD00FEC355 /* Federatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Federatable.swift; sourceTree = "<group>"; };
+		D54D13C32E5CEEB800FEC355 /* iCloudAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudAPI.swift; sourceTree = "<group>"; };
+		D54D13C52E5CEF2200FEC355 /* iCloudAPI+Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iCloudAPI+Types.swift"; sourceTree = "<group>"; };
 		D54DED1328CBC44B008B27A0 /* ErrorLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLogTableViewCell.swift; sourceTree = "<group>"; };
 		D552B1D72A042A740066216F /* AppPermissionsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPermissionsCard.swift; sourceTree = "<group>"; };
 		D552DE372D39ADED00E737BE /* PatreonAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PatreonAPI.plist; sourceTree = "<group>"; };
@@ -1982,6 +1990,7 @@
 				BFC51D7922972F1F00388324 /* Server */,
 				BF0DCA642433BDE200E3A595 /* Analytics */,
 				BFF00D2E2501BD4B00746320 /* Intents */,
+				D526A40D2E32F74D00D2E768 /* Fediverse */,
 				BFDB6A0922AAEDA1007EA6D6 /* Operations */,
 				BFD2478D2284C4C700981D42 /* Components */,
 				BF3D648922E79A7700E9056B /* Types */,
@@ -2302,6 +2311,17 @@
 				D59A6B7A2AA91B8E00F61259 /* PythonCommand.swift */,
 			);
 			path = Types;
+			sourceTree = "<group>";
+		};
+		D526A40D2E32F74D00D2E768 /* Fediverse */ = {
+			isa = PBXGroup;
+			children = (
+				D526A40E2E32F75D00D2E768 /* MastodonAPI.swift */,
+				D526A4102E32F80700D2E768 /* MastodonAPI+Types.swift */,
+				D54D13C32E5CEEB800FEC355 /* iCloudAPI.swift */,
+				D54D13C52E5CEF2200FEC355 /* iCloudAPI+Types.swift */,
+			);
+			path = Fediverse;
 			sourceTree = "<group>";
 		};
 		D54058B72A1D6251008CCC58 /* Previews */ = {
@@ -3407,6 +3427,7 @@
 				D5418F172AD740890014ABD6 /* AppScreenshotCollectionViewCell.swift in Sources */,
 				BFCCB51A245E3401001853EA /* VerifyAppOperation.swift in Sources */,
 				BFF0B6982322CAB8007A79E1 /* InstructionsViewController.swift in Sources */,
+				D526A4112E32F80800D2E768 /* MastodonAPI+Types.swift in Sources */,
 				BF9ABA4522DCFF43008935CF /* BrowseViewController.swift in Sources */,
 				D5935AED29C39DE300C157EF /* SourceComponents.swift in Sources */,
 				D5A0537329B91DB400997551 /* SourceDetailContentViewController.swift in Sources */,
@@ -3462,7 +3483,10 @@
 				D593F1942717749A006E82DE /* PatchAppOperation.swift in Sources */,
 				BF770E5122BB1CF6002A40FE /* InstallAppOperation.swift in Sources */,
 				BF9ABA4B22DD1380008935CF /* NavigationBar.swift in Sources */,
+				D5AD66932ECFE08800964E26 /* iCloudAPI+Types.swift in Sources */,
 				BF6C8FAC242935ED00125131 /* NSAttributedString+Markdown.m in Sources */,
+				D54D13C42E5CEEB800FEC355 /* iCloudAPI.swift in Sources */,
+				D526A40F2E32F75D00D2E768 /* MastodonAPI.swift in Sources */,
 				BFF00D322501BDA100746320 /* BackgroundRefreshAppsOperation.swift in Sources */,
 				BF0C4EBD22A1BD8B009A2DD7 /* AppManager.swift in Sources */,
 				BF2901312318F7A800D88A45 /* AppBannerView.swift in Sources */,

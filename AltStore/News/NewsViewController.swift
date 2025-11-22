@@ -56,6 +56,7 @@ class NewsViewController: UICollectionViewController, PeekPopPreviewing
     // Cache
     private var cachedCellSizes = [String: CGSize]()
     private var cancellables = Set<AnyCancellable>()
+    private var updateFediverseInteractionsResult: Result<Void, Error>?
     
     init?(source: Source?, coder: NSCoder)
     {
@@ -145,6 +146,13 @@ class NewsViewController: UICollectionViewController, PeekPopPreviewing
             // since the database might not be loaded yet.
             self.collectionView.contentInset.bottom = 20
         }
+    }
+    
+    override func viewIsAppearing(_ animated: Bool)
+    {
+        super.viewIsAppearing(animated)
+        
+        self.updateFediverseInteractionsIfNeeded()
     }
 }
 
@@ -240,6 +248,9 @@ private extension NewsViewController
     @objc func updateSources()
     {
         AppManager.shared.updateAllSources() { result in
+            self.updateFediverseInteractionsResult = nil
+            self.updateFediverseInteractionsIfNeeded()
+            
             self.collectionView.refreshControl?.endRefreshing()
             
             guard case .failure(let error) = result else { return }
@@ -282,6 +293,51 @@ private extension NewsViewController
             
             self.retryButton.isHidden = true
             self.placeholderView.activityIndicatorView.stopAnimating()
+        }
+    }
+    
+    func updateFediverseInteractionsIfNeeded()
+    {
+        guard self.updateFediverseInteractionsResult == nil else { return }
+        
+        let startTime = CFAbsoluteTimeGetCurrent()
+        
+        Task<Void, Never>(priority: .utility) { @MainActor in
+            do
+            {
+                let newsItems = self.dataSource.fetchedResultsController.fetchedObjects ?? []
+                
+                let objectIDs = Set(newsItems.map(\.objectID))
+                let statusIDs = Set(newsItems.compactMap { $0.statusID })
+                
+                let toots = try await MastodonAPI.shared.fetchToots(ids: statusIDs)
+                let tootsByID = toots.reduce(into: [:]) { $0[$1.id] = $1 }
+                
+                let context = DatabaseManager.shared.persistentContainer.newBackgroundContext()
+                try await context.perform {
+                    
+                    let newsItems = objectIDs.compactMap { context.object(with: $0) as? NewsItem }
+                    for newsItem in newsItems
+                    {
+                        guard let statusID = newsItem.statusID, let toot = tootsByID[statusID] else { continue }
+                        newsItem.federatedURL = toot.url
+                        newsItem.likesCount = Int32(toot.favourites_count)
+                        newsItem.boostsCount = Int32(toot.reblogs_count)
+                        newsItem.commentsCount = Int32(toot.replies_count)
+                    }
+                    
+                    try context.save()
+                }
+                
+                Logger.main.info("Fetched \(toots.count) NewsItem statuses in \(CFAbsoluteTimeGetCurrent() - startTime) seconds")
+                
+                self.updateFediverseInteractionsResult = .success(())
+            }
+            catch
+            {
+                Logger.main.error("Failed to fetch Fediverse interactions for News tab. \(error.localizedDescription, privacy: .public)")
+                self.updateFediverseInteractionsResult = .failure(error)
+            }
         }
     }
 }

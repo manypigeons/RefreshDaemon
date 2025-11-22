@@ -304,6 +304,17 @@ open class MergePolicy: RSTRelationshipPreservingMergePolicy
                     databasePledge.managedObjectContext?.delete(databasePledge)
                 }
                 
+            case let databaseObject as NewsItem:
+                guard let contextObject = conflict.conflictingObjects.first as? NewsItem else { break }
+                
+                // Revert null Fediverse interactions to database values.
+                if contextObject.value(forKey: #keyPath(NewsItem.likesCount)) == nil || contextObject.value(forKey: #keyPath(NewsItem.boostsCount)) == nil || contextObject.value(forKey: #keyPath(NewsItem.commentsCount)) == nil
+                {
+                    contextObject.likesCount = databaseObject.likesCount
+                    contextObject.boostsCount = databaseObject.boostsCount
+                    contextObject.commentsCount = databaseObject.commentsCount
+                }
+                
             default: break
             }
         }
