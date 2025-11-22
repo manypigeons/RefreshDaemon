@@ -110,9 +110,10 @@ public extension UserDefaults
         var shouldManageInstalledApps = ProcessInfo.processInfo.isOperatingSystemAtLeast(ios18)
         
         let iOS26_1 = OperatingSystemVersion(majorVersion: 26, minorVersion: 1, patchVersion: 0)
-        if ProcessInfo.processInfo.isOperatingSystemAtLeast(iOS26_1)
+        let iOS26_2 = OperatingSystemVersion(majorVersion: 26, minorVersion: 2, patchVersion: 0)
+        if ProcessInfo.processInfo.isOperatingSystemAtLeast(iOS26_1) && !ProcessInfo.processInfo.isOperatingSystemAtLeast(iOS26_2)
         {
-            // Disable auto-managing apps on iOS 26 until installedApps bug is fixed.
+            // Disable auto-managing apps on iOS 26.1.
             shouldManageInstalledApps = false
         }
         
