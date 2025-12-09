@@ -10,6 +10,12 @@
             "state" : "new",
             "value" : "riley@altstore.io"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "riley@altstore.io"
+          }
         }
       }
     },
@@ -21,6 +27,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Error Description"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エラーの詳細"
           }
         }
       }
@@ -34,6 +46,12 @@
             "state" : "new",
             "value" : "How it works"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仕組み"
+          }
         }
       }
     },
@@ -45,6 +63,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Disable Response Caching"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レスポンスキャッシュを無効化"
           }
         }
       }
@@ -58,6 +82,12 @@
             "state" : "new",
             "value" : "Connect Account"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アカウントを接続"
+          }
         }
       }
     },
@@ -69,6 +99,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Date"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日付"
           }
         }
       }
@@ -82,6 +118,12 @@
             "state" : "new",
             "value" : "Version 2.0"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バージョン2.0"
+          }
         }
       }
     },
@@ -93,6 +135,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Could not connect to AltServer."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AltServerに接続できませんでした。"
           }
         }
       }
@@ -106,6 +154,12 @@
             "state" : "new",
             "value" : "Sign in with Apple ID"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple IDでサインイン"
+          }
         }
       }
     },
@@ -118,6 +172,12 @@
             "state" : "new",
             "value" : "Developer"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開発者"
+          }
         }
       }
     },
@@ -129,6 +189,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Error Log"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エラーログ"
           }
         }
       }
@@ -143,7 +209,8 @@
             "value" : "Caroline Moore"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "B8Q-e7-beR.configuration.title" : {
       "comment" : "Class = \"UIButton\"; configuration.title = \"  \"; ObjectID = \"B8Q-e7-beR\";",
@@ -153,6 +220,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "  "
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
           }
         }
       }
@@ -166,6 +239,12 @@
             "state" : "new",
             "value" : " "
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
         }
       }
     },
@@ -177,6 +256,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Add to Siri…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siriに追加..."
           }
         }
       }
@@ -191,7 +276,8 @@
             "value" : "Riley Testut"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "D6b-cd-pVK.text" : {
       "comment" : "Class = \"UILabel\"; text = \"Licenses\"; ObjectID = \"D6b-cd-pVK\";",
@@ -201,6 +287,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Licenses"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ライセンス"
           }
         }
       }
@@ -214,6 +306,12 @@
             "state" : "new",
             "value" : "Settings"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
         }
       }
     },
@@ -226,6 +324,12 @@
             "state" : "new",
             "value" : "Background Refresh"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バックグラウンド更新"
+          }
         }
       }
     },
@@ -237,6 +341,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Designer"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デザイナー"
           }
         }
       }
@@ -251,7 +361,8 @@
             "value" : "Caroline Moore"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "hRA-OK-Vjw.text" : {
       "comment" : "Class = \"UILabel\"; text = \"Developer\"; ObjectID = \"hRA-OK-Vjw\";",
@@ -261,6 +372,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Developer"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開発者"
           }
         }
       }
@@ -274,6 +391,12 @@
             "state" : "new",
             "value" : "Enforce 3-App Limit"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3アプリ制限を適用"
+          }
         }
       }
     },
@@ -285,6 +408,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Clear Cache…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャッシュをクリア..."
           }
         }
       }
@@ -299,7 +428,8 @@
             "value" : "Riley Testut"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "JcT-wX-zay.title" : {
       "comment" : "Class = \"UINavigationItem\"; title = \"Software Licenses\"; ObjectID = \"JcT-wX-zay\";",
@@ -309,6 +439,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Software Licenses"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ソフトウェアライセンス"
           }
         }
       }
@@ -322,6 +458,12 @@
             "state" : "new",
             "value" : "Manage Subscription"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サブスクリプションの管理"
+          }
         }
       }
     },
@@ -333,6 +475,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Settings"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
           }
         }
       }
@@ -346,6 +494,12 @@
             "state" : "new",
             "value" : "Success"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "成功"
+          }
         }
       }
     },
@@ -357,6 +511,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Contact Us"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "お問い合わせ"
           }
         }
       }
@@ -383,6 +543,12 @@
             "state" : "new",
             "value" : "Operations"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オペレーション"
+          }
         }
       }
     },
@@ -394,6 +560,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Send Feedback"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "フィードバックを送信"
           }
         }
       }
@@ -407,6 +579,12 @@
             "state" : "new",
             "value" : "Error Code"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エラーコード"
+          }
         }
       }
     },
@@ -418,6 +596,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Email"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eメール"
           }
         }
       }
@@ -431,6 +615,12 @@
             "state" : "new",
             "value" : "Privacy Policy"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プライバシーポリシー"
+          }
         }
       }
     },
@@ -442,6 +632,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Type"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タイプ"
           }
         }
       }
@@ -455,6 +651,12 @@
             "state" : "new",
             "value" : "Date"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日付"
+          }
         }
       }
     },
@@ -466,6 +668,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Auto Manage Installed Apps"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "インストール済みアプリの自動管理"
           }
         }
       }
@@ -479,6 +687,12 @@
             "state" : "new",
             "value" : "View Refresh Attempts"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新試行を表示"
+          }
         }
       }
     },
@@ -491,6 +705,12 @@
             "state" : "new",
             "value" : "Success"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "成功"
+          }
         }
       }
     },
@@ -501,6 +721,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
+            "value" : "Patreon"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "Patreon"
           }
         }
@@ -515,6 +741,12 @@
             "state" : "new",
             "value" : "Refresh Attempts"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新試行"
+          }
         }
       }
     },
@@ -526,6 +758,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "View Error Log"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エラーログを表示"
           }
         }
       }
@@ -539,6 +777,12 @@
             "state" : "new",
             "value" : "Follow AltStore for updates"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AltStoreをフォローして最新情報を入手しましょう"
+          }
         }
       }
     },
@@ -551,6 +795,12 @@
             "state" : "new",
             "value" : "Name"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名前"
+          }
         }
       }
     },
@@ -562,6 +812,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Change App Icon"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリのアイコンを変更"
           }
         }
       }
@@ -576,7 +832,8 @@
             "value" : "Shane Gill"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     }
   },
   "version" : "1.0"

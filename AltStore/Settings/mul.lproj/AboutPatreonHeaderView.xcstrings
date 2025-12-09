@@ -10,6 +10,12 @@
             "state" : "new",
             "value" : "Riley Testut"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ライリー・テストゥ"
+          }
         }
       }
     },
@@ -35,6 +41,12 @@
             "state" : "new",
             "value" : "Link Patreon account"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patreonアカウントをリンク"
+          }
         }
       }
     },
@@ -46,6 +58,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Developer"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開発者"
           }
         }
       }
@@ -59,6 +77,12 @@
             "state" : "new",
             "value" : "Operations"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オペレーション"
+          }
         }
       }
     },
@@ -71,6 +95,12 @@
             "state" : "new",
             "value" : "Become a patron"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パトロンになる"
+          }
         }
       }
     },
@@ -82,6 +112,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Shane Gill"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シェーン・ギル"
           }
         }
       }

@@ -10,6 +10,12 @@
             "state" : "new",
             "value" : "2"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2"
+          }
         }
       }
     },
@@ -21,6 +27,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Sign in"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サインイン"
           }
         }
       }
@@ -34,6 +46,12 @@
             "state" : "new",
             "value" : "Enable iTunes Wi-Fi Sync and connect to the same Wi-Fi as AltServer."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iTunes Wi-Fi同期を有効にし、AltServerと同じWi-Fiに接続してください。"
+          }
         }
       }
     },
@@ -45,6 +63,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Refresh AltStore"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AltStoreを更新"
           }
         }
       }
@@ -58,6 +82,12 @@
             "state" : "new",
             "value" : "Leave AltServer running in the background on your computer."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AltServerをコンピュータのバックグラウンドで実行したままにしてください。"
+          }
         }
       }
     },
@@ -69,6 +99,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "APPLE ID"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple ID"
           }
         }
       }
@@ -82,6 +118,12 @@
             "state" : "new",
             "value" : "PASSWORD"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パスワード"
+          }
         }
       }
     },
@@ -94,6 +136,12 @@
             "state" : "new",
             "value" : "How it works"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仕組み"
+          }
         }
       }
     },
@@ -104,6 +152,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
+            "value" : "name@email.com"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "name@email.com"
           }
         }
@@ -118,6 +172,12 @@
             "state" : "new",
             "value" : "Welcome to AltStore."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AltStoreへようこそ。"
+          }
         }
       }
     },
@@ -129,6 +189,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Connect to Wi-Fi"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wi-Fiに接続"
           }
         }
       }
@@ -142,6 +208,12 @@
             "state" : "new",
             "value" : "Apps are refreshed in the background when on same Wi-Fi as AltServer."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AltServerと同じWi-Fiに接続している場合、アプリはバックグラウンドで更新されます。"
+          }
         }
       }
     },
@@ -152,6 +224,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
+            "value" : "4"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "4"
           }
         }
@@ -166,6 +244,12 @@
             "state" : "new",
             "value" : "1"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1"
+          }
         }
       }
     },
@@ -177,6 +261,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Download Apps"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリをダウンロード"
           }
         }
       }
@@ -190,6 +280,12 @@
             "state" : "new",
             "value" : "Browse and download apps directly from AltStore."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AltStoreから直接アプリを閲覧、ダウンロードできます。"
+          }
         }
       }
     },
@@ -201,6 +297,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Close"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "閉じる"
           }
         }
       }
@@ -214,6 +316,12 @@
             "state" : "new",
             "value" : "Apps Refresh Automatically"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリは自動的に更新されます"
+          }
         }
       }
     },
@@ -224,6 +332,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
+            "value" : "3"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "3"
           }
         }
@@ -238,6 +352,12 @@
             "state" : "new",
             "value" : "Your Apple ID is used to configure apps so they can be installed on this device. Your credentials will be stored securely in this device's Keychain and sent only to Apple for authentication."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple IDは、アプリをこのデバイスにインストールできるように設定するために使用されます。認証情報は、このデバイスのキーチェーンに安全に保存され、認証のためにのみAppleに送信されます。"
+          }
         }
       }
     },
@@ -249,6 +369,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Why do we need this?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "なぜこれが必要ですか？"
           }
         }
       }
@@ -262,6 +388,12 @@
             "state" : "new",
             "value" : "Refresh Later"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "後で更新"
+          }
         }
       }
     },
@@ -274,6 +406,12 @@
             "state" : "new",
             "value" : "Got it"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "わかりました"
+          }
         }
       }
     },
@@ -284,6 +422,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
+            "value" : "••••••••"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "••••••••"
           }
         }
@@ -298,6 +442,12 @@
             "state" : "new",
             "value" : "Sign in with your Apple ID to get started."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple IDでサインインして始めましょう。"
+          }
         }
       }
     },
@@ -310,6 +460,12 @@
             "state" : "new",
             "value" : "Refresh Now"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今すぐ更新"
+          }
         }
       }
     },
@@ -321,6 +477,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Launch AltServer"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AltServerを起動"
           }
         }
       }
