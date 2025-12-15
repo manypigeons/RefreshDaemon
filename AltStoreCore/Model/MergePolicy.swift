@@ -43,22 +43,22 @@ public struct MergeError: ALTLocalizedError
         switch self.code
         {
         case .noVersions:
-            var appName = NSLocalizedString("At least one app", comment: "")
+            var appName = NSLocalizedString("At least one app", bundle: Bundle(for: PatreonAPI.self), comment: "")
             if let name = self.appName, let bundleID = self.appBundleID
             {
                 appName = name + " (\(bundleID))"
             }
             
-            return String(format: NSLocalizedString("%@ does not have any app versions.", comment: ""), appName)
+            return String(format: NSLocalizedString("%@ does not have any app versions.", bundle: Bundle(for: PatreonAPI.self), comment: ""), appName)
             
         case .incorrectVersionOrder:
-            var appName = NSLocalizedString("one or more apps", comment: "")
+            var appName = NSLocalizedString("one or more apps", bundle: Bundle(for: PatreonAPI.self), comment: "")
             if let name = self.appName, let bundleID = self.appBundleID
             {
                 appName = name + " (\(bundleID))"
             }
             
-            return String(format: NSLocalizedString("The cached versions for %@ do not match the source.", comment: ""), appName)
+            return String(format: NSLocalizedString("The cached versions for %@ do not match the source.", bundle: Bundle(for: PatreonAPI.self), comment: ""), appName)
             
         case .incorrectPermissions:
             var appName = NSLocalizedString("one or more apps", comment: "")
@@ -67,14 +67,14 @@ public struct MergeError: ALTLocalizedError
                 appName = name + " (\(bundleID))"
             }
             
-            return String(format: NSLocalizedString("The cached permissions for %@ do not match the source.", comment: ""), appName)
+            return String(format: NSLocalizedString("The cached permissions for %@ do not match the source.", bundle: Bundle(for: PatreonAPI.self), comment: ""), appName)
         }
     }
     
     public var recoverySuggestion: String? {
         switch self.code
         {
-        case .incorrectVersionOrder: return NSLocalizedString("Please try again later.", comment: "")
+        case .incorrectVersionOrder: return NSLocalizedString("Please try again later.", bundle: Bundle(for: PatreonAPI.self), comment: "")
         default: return nil
         }
     }
