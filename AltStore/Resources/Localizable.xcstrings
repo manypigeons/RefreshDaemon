@@ -36,7 +36,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "%@"
           }
         }
       }
@@ -52,7 +52,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "%1$@ %2$@"
           }
         }
       }
@@ -68,7 +68,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%1$@%2$@はダウンロード可能になりました。"
+            "value" : "%1$@%2$@がダウンロード可能になりました。"
           }
         }
       }
@@ -84,7 +84,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%1$@%2$@アップデート。%3$@にリリース。"
+            "value" : "%1$@%2$@のアップデート。%3$@にリリース。"
           }
         }
       }
@@ -200,7 +200,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@日間"
+            "value" : "%@日"
           }
         }
       }
@@ -210,7 +210,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@日間"
+            "value" : "%@日"
           }
         }
       }
@@ -344,7 +344,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@サポートされていないアップデートが利用可能です"
+            "value" : "サポートされていないアップデート%@件が利用可能です"
           }
         }
       }
@@ -364,7 +364,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "^[%lld app](inflect: true)"
+            "value" : "^[%lld アプリ](inflect: true)"
           }
         }
       }
@@ -860,7 +860,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "本当に%1$@%2$@をしますか？"
+            "value" : "%2$@を%1$@してもよろしいですか？"
           }
         }
       }
@@ -910,7 +910,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ブラウズ"
+            "value" : "検索"
           }
         }
       }
@@ -1306,7 +1306,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%1$@%2$@をダウンロード"
+            "value" : "%1$@の%2$@をダウンロード"
           }
         }
       }
@@ -1476,7 +1476,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@で期限が切れます"
+            "value" : "%@後に期限が切れます"
           }
         }
       }
@@ -1486,7 +1486,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@で期限が切れます。"
+            "value" : "%@後に期限が切れます。"
           }
         }
       }
@@ -1756,7 +1756,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "勾配"
+            "value" : "グラデーション"
           }
         }
       }
@@ -2126,7 +2126,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "詳細"
+            "value" : "詳細を表示"
           }
         }
       }
@@ -2222,7 +2222,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "非開発者用Apple IDでは、アクティブなアプリとアプリ拡張機能は3つまでに制限され、「%1$@」は%2$@と%3$@を含んでいます。無効にするアプリを1つ選んでください。"
+            "value" : "非開発者用Apple IDでは、アクティブなアプリとアプリ拡張機能は3つまでに制限され、「%1$@」は%2$@個の%3$@を含んでいます。無効にするアプリを1つ選んでください。"
           }
         }
       }
@@ -2872,7 +2872,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "次の皆さまに深く感謝申し上げます。"
+            "value" : "以下の皆さまに深く感謝申し上げます。"
           }
         }
       }
@@ -3586,7 +3586,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "もう一度お試しください"
+            "value" : "再試行"
           }
         }
       }
@@ -3896,7 +3896,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "アッデート%@"
+            "value" : "%@をアッデート"
           }
         }
       }

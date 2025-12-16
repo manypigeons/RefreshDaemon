@@ -12,7 +12,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "%1$@ %2$@"
           }
         }
       }
@@ -100,7 +100,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "アクティベート%@に失敗しました"
+            "value" : "%@のアクティベートに失敗しました"
           }
         }
       }
@@ -280,7 +280,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "バックアップ%@が失敗しました"
+            "value" : "%@のバックアップに失敗しました"
           }
         }
       }
@@ -490,7 +490,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "インストール%@が失敗しました"
+            "value" : "%@のインストールに失敗しました"
           }
         }
       }
@@ -700,7 +700,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "更新%@に失敗しました"
+            "value" : "%@の更新に失敗しました"
           }
         }
       }
@@ -710,7 +710,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "復元%@に失敗しました"
+            "value" : "%@の復元に失敗しました"
           }
         }
       }

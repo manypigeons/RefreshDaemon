@@ -266,7 +266,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ブラウズ"
+            "value" : "検索"
           }
         }
       }
@@ -284,7 +284,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hello Me"
+            "value" : "テキストを入力"
           }
         }
       }
@@ -338,7 +338,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ブラウズ"
+            "value" : "検索"
           }
         }
       }
