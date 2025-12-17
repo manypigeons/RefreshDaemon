@@ -567,7 +567,7 @@ private extension AppMarketplace
         let bundleID = await $storeApp.bundleIdentifier
         InstallTaskContext.beginInstallationHandler?(bundleID) // TODO: Is this called too early?
         
-        if case .update = operation
+        if case .update = operation, #unavailable(iOS 18)
         {
             // MarketplaceKit doesn't support updating marketplaces themselves pre-iOS 18 (🙄)
             // so we have to ask user to manually update AltStore via Safari.
