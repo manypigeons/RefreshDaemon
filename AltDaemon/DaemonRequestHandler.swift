@@ -43,7 +43,7 @@ struct DaemonRequestHandler: RequestHandler
         
         print("Awaiting begin installation request...")
         
-        connection.receiveRequest() { (result) in
+        connection.receiveRequest { result in
             print("Received begin installation request with result:", result)
             
             do
@@ -114,10 +114,19 @@ struct DaemonRequestHandler: RequestHandler
                 
             case .success:
                 print("Removed app:", request.bundleIdentifier)
-                
+
                 let response = RemoveAppResponse()
                 completionHandler(.success(response))
             }
         }
     }
+
+    func handleEnableUnsignedCodeExecutionRequest(_ request: EnableUnsignedCodeExecutionRequest, for connection: Connection, completionHandler: @escaping (Result<EnableUnsignedCodeExecutionResponse, Error>) -> Void)
+    {
+        // AltDaemon does not support enabling unsigned code execution (JIT) on-device.
+        // Return an error so the protocol is satisfied and all other requests still work.
+        print("Ignoring unsupported EnableUnsignedCodeExecutionRequest for:", request.processID ?? request.processName ?? "nil")
+        completionHandler(.failure(ALTServerError(.unknownRequest)))
+    }
 }
+

@@ -9,6 +9,7 @@
 #import "ALTConnection.h"
 #import "NSError+ALTServerError.h"
 #import "CFNotificationName+AltStore.h"
+#import "ALTWrappedError.h"
 
 // libproc
 int proc_pidpath(int pid, void * buffer, uint32_t buffersize);

@@ -11,6 +11,14 @@
 #if ALTJIT
 #import "AltJIT-Swift.h"
 @import AltSign;
+#elif ALTDAEMON
+// Theos daemon build: the Swift code compiles into the AltDaemon module,
+// so its generated interop header is AltDaemon-Swift.h (not AltStoreCore's).
+// AltSign is a Swift(+CAltSign) module here with no ObjC "AltSign" clang
+// module to @import, so pull in the one symbol this file needs
+// (ALTAppNameErrorKey) directly from AltSign's header.
+#import "AltDaemon-Swift.h"
+#import <AltSign/NSError+ALTErrors.h>
 #elif TARGET_OS_OSX
 #import "AltServer-Swift.h"
 @import AltSign;

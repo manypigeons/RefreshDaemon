@@ -1,0 +1,1 @@
+../../Shared/Extensions/NSError+AltStore.swift

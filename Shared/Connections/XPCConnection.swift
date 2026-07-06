@@ -62,6 +62,10 @@ private extension XPCConnection
     func makeProxy(errorHandler: @escaping (Error) -> Void) -> XPCConnectionProxy
     {
         let proxy = self.xpcConnection.remoteObjectProxyWithErrorHandler { (error) in
+            // Under some SDKs the block's NSError imports as optional; coalesce
+            // so this compiles whether `error` is Error or Error? (harmless
+            // warning where it's already non-optional).
+            let error = error ?? ALTServerError(.lostConnection)
             print("Error messaging remote object proxy:", error)
             self.error = error
             errorHandler(error)
