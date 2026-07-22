@@ -1,7 +1,9 @@
-# AltDaemon-New
+# RefreshDaemon
 
-> This is a fork of AltDaemon from AltStore by rileytestut.
+> This is a "fork" of AltDaemon from AltStore by rileytestut.
 
-This fork is intended to make AltDaemon compatible with modern rootless jailbreaks like Dopamine and palera1n. This also aims to add a built in cli tool for refreshing apps on device without AltStore, SideStore, or LiveContainer.
+This is a remake of AltDaemon intended to function headlessly without AltStore on modern jailbreaks.
+
+This solves the issue of keeping your jailbreak application signed without needing to use AltStore or SideStore.
 
 You can find AltStore [here](https://github.com/altstoreio/AltStore).
